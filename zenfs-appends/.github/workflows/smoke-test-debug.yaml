@@ -1,0 +1,45 @@
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - '**'
+name: Quick Test (Debug)
+jobs:
+  smoke-test-debug:
+    runs-on: self-hosted
+    steps:
+      - name: Clean
+        run: rm -rf ${GITHUB_WORKSPACE}/*
+      - name: Checkout build scripts
+        run: git clone ~/harness.git
+      - name: Checkout zbdbench
+        uses: actions/checkout@v2
+        with:
+          repository: westerndigitalcorporation/zbdbench
+          ref: v0.1.1
+          path: harness/rocksdb-context/zbdbench
+      - name: Checkout rocksdb
+        uses: actions/checkout@v2
+        with:
+          repository: facebook/rocksdb
+          ref: v7.0.2
+          path: harness/rocksdb-context/rocksdb
+      - name: Checkout zenfs
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          path: harness/rocksdb-context/rocksdb/plugin/zenfs
+      - name: Build docker image
+        run: cd harness && st -o logs/make-smoke -- make NO_VAGRANT=1 V=1 rocksdb-docker-image 
+      - name: Run smoke tests
+        run: cd harness && st --silent -o logs/make-smoke -- disk-select --disk 1TB -- make NO_VAGRANT=1 ROCKSDB_DEBUG_LEVEL=1 results/zenfs-smoke.xml 
+      - name: Run utils tests
+        run: cd harness && st --silent -o logs/make-utils -- disk-select --disk 1TB -- make NO_VAGRANT=1 ROCKSDB_DEBUG_LEVEL=1 results/zenfs-utils.xml 
+      - name: Collect Results
+        run: cd harness && make NO_VAGRANT=1 upload 
+        if: always()
+      - name: Remove images
+        run: podman rmi --force --all
+        if: always()
