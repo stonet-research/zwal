@@ -1,0 +1,97 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloada -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloada -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-12-21 14:35:25:115 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+2023-12-21 14:35:35:075 10 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:35:45:075 20 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:35:55:075 30 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:05:075 40 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:15:075 50 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:25:075 60 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:35:075 70 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:45:075 80 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:36:55:075 90 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:05:075 100 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:15:075 110 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:25:075 120 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:35:075 130 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:45:075 140 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:37:55:075 150 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:05:075 160 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:15:075 170 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:25:075 180 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:35:076 190 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:45:075 200 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:38:55:075 210 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:05:075 220 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:15:075 230 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:25:075 240 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:35:075 250 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:45:075 260 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:39:55:075 270 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:05:075 280 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:15:075 290 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:25:075 300 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:35:075 310 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:45:075 320 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:40:55:075 330 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:05:075 340 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:15:075 350 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:25:075 360 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:35:075 370 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:45:075 380 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:41:55:075 390 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:05:075 400 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:15:075 410 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:25:075 420 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:35:075 430 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:45:075 440 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:42:55:075 450 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:05:075 460 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:15:075 470 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:25:075 480 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:35:075 490 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:45:076 500 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:43:55:076 510 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:05:075 520 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:15:076 530 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:25:075 540 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:35:075 550 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:45:075 560 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:44:55:075 570 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:05:075 580 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:15:075 590 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:25:075 600 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:35:075 610 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:45:075 620 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:45:55:075 630 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:05:075 640 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:15:075 650 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:25:075 660 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:35:075 670 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:45:075 680 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:46:55:075 690 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:47:05:075 700 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:47:15:075 710 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-21 14:47:25:075 720 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+Traceback (most recent call last):
+  File "./bin/ycsb", line 325, in <module>
+    sys.exit(main())
+  File "./bin/ycsb", line 316, in main
+    return subprocess.call(ycsb_command)
+  File "/usr/lib/python2.7/subprocess.py", line 172, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 1099, in wait
+    pid, sts = _eintr_retry_call(os.waitpid, self.pid, 0)
+  File "/usr/lib/python2.7/subprocess.py", line 125, in _eintr_retry_call
+    return func(*args)
+KeyboardInterrupt

@@ -1,0 +1,77 @@
+Nameless WALs: Opening character device: /dev/ng1n1
+MDTS 524288 
+Zasl is 4194304 4096 
+Register channel 0
+Register channel 1
+Register channel 2
+Register channel 3
+Register channel 4
+Register channel 5
+Register channel 6
+Register channel 7
+Nameless WALs: Opened character device
+Booting from modified ZenFS
+Set seed to 1704980647696537 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    32768
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    124.9 MB (estimated)
+FileSize:   62.7 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+DB path: [rocksdbtest/dbbench]
+WAL allocated for zones 4 to 7 
+Register channel 8
+fillrandom   :      34.731 micros/op 28791 ops/sec 1.138 seconds 32768 operations;  109.7 MB/s
+Microseconds per write:
+Count: 32768 Average: 34.7327  StdDev: 41.56
+Min: 4  Median: 31.9096  Max: 5501
+Percentiles: P50: 31.91 P75: 41.57 P99: 73.54 P99.9: 105.75 P99.99: 1729.24
+------------------------------------------------------
+(       3,       4 ]        5   0.015%   0.015% 
+(       4,       6 ]        9   0.027%   0.043% 
+(       6,      10 ]      273   0.833%   0.876% 
+(      10,      15 ]      168   0.513%   1.389% 
+(      15,      22 ]     1058   3.229%   4.617% #
+(      22,      34 ]    18008  54.956%  59.573% ###########
+(      34,      51 ]    11357  34.659%  94.232% #######
+(      51,      76 ]     1733   5.289%  99.521% #
+(      76,     110 ]      142   0.433%  99.954% 
+(     110,     170 ]        5   0.015%  99.969% 
+(     580,     870 ]        1   0.003%  99.973% 
+(    1300,    1900 ]        8   0.024%  99.997% 
+(    4400,    6600 ]        1   0.003% 100.000% 
+
+Last write (close) 4: 14798848 7 
+Correct Nameless syncs:7 writes:32285 ratio:4612.142857
+Delete once log 
+Unegister channel 9

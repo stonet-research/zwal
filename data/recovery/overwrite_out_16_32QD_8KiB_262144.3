@@ -1,0 +1,79 @@
+Nameless WALs: Opening character device: /dev/ng2n2
+MDTS 524288 
+Register channel 0
+Register channel 1
+Register channel 2
+Register channel 3
+Register channel 4
+Register channel 5
+Register channel 6
+Register channel 7
+Nameless WALs: Opened character device
+Booting from modified ZenFS
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 1055846400 
+Last write (recover) 4: 12288 2064670 
+Last write (close) 4: 12288 0 
+Delete once log 
+Unegister channel 9
+Set seed to 1704899723201747 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+WAL allocated for zones 4 to 7 
+Register channel 8
+Extent could not be found?
+Recovery time 5762006150, apply time 2440906860
+Recovery finished 1
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+Wal recovery c:32159 s:3097448509 a:96316.692341 st:24016.360301
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    10
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    0.0 MB (estimated)
+FileSize:   0.0 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+DB path: [rocksdbtest/dbbench]
+WAL allocated for zones 7 to 10 
+Register channel 8
+overwrite    :     869.700 micros/op 1136 ops/sec 0.009 seconds 10 operations;    4.3 MB/s
+Microseconds per write:
+Count: 10 Average: 886.2000  StdDev: 1803.28
+Min: 4  Median: 10.0000  Max: 5358
+Percentiles: P50: 10.00 P75: 28.00 P99: 5358.00 P99.9: 5358.00 P99.99: 5358.00
+------------------------------------------------------
+(       3,       4 ]        3  30.000%  30.000% ######
+(       6,      10 ]        2  20.000%  50.000% ####
+(      10,      15 ]        1  10.000%  60.000% ##
+(      15,      22 ]        1  10.000%  70.000% ##
+(      22,      34 ]        1  10.000%  80.000% ##
+(    2900,    4400 ]        1  10.000%  90.000% ##
+(    4400,    6600 ]        1  10.000% 100.000% ##
+
+Last write (close) 7: 8192 2 
+Correct Nameless syncs:2 writes:5 ratio:2.500000
+Delete once log 
+Unegister channel 9

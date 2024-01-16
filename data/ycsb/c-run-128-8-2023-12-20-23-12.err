@@ -1,0 +1,28 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadc -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadc -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-12-20 23:45:59:488 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+2023-12-20 23:46:09:450 10 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-20 23:46:19:450 20 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2023-12-20 23:46:29:450 30 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+site.ycsb.DBException: org.rocksdb.RocksDBException: While appending to file: hello_zenfs/000018.sst: No space left on device
+	at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:81)
+	at site.ycsb.DBWrapper.init(DBWrapper.java:90)
+	at site.ycsb.ClientThread.run(ClientThread.java:91)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.rocksdb.RocksDBException: While appending to file: hello_zenfs/000018.sst: No space left on device
+	at org.rocksdb.RocksDB.open(Native Method)
+	at org.rocksdb.RocksDB.open(RocksDB.java:307)
+	at site.ycsb.db.rocksdb.RocksDBClient.initRocksDB(RocksDBClient.java:182)
+	at site.ycsb.db.rocksdb.RocksDBClient.init(RocksDBClient.java:78)
+	... 3 more
+2023-12-20 23:46:33:149 33 sec: 0 operations; est completion in 106751991167300 days 15 hours 

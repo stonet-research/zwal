@@ -1,0 +1,33 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloada -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -load
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloada -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-12-21 12:59:23:654 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2023-12-21 12:59:33:615 10 sec: 186410 operations; 18639.14 current ops/sec; est completion in 4 minutes [INSERT: Count=186474, Max=12231, Min=15, Avg=37.98, 90=50, 99=72, 99.9=90, 99.99=232] 
+2023-12-21 12:59:43:614 20 sec: 449629 operations; 26324.53 current ops/sec; est completion in 3 minutes [INSERT: Count=263173, Max=14583, Min=17, Avg=36.31, 90=48, 99=59, 99.9=71, 99.99=123] 
+2023-12-21 12:59:53:614 30 sec: 727821 operations; 27819.2 current ops/sec; est completion in 3 minutes [INSERT: Count=278195, Max=5291, Min=15, Avg=34.3, 90=47, 99=58, 99.9=70, 99.99=216] 
+2023-12-21 13:00:03:614 40 sec: 1005192 operations; 27737.1 current ops/sec; est completion in 2 minutes [INSERT: Count=277367, Max=1814, Min=16, Avg=34.39, 90=47, 99=56, 99.9=68, 99.99=144] 
+2023-12-21 13:00:13:614 50 sec: 1286184 operations; 28099.2 current ops/sec; est completion in 2 minutes [INSERT: Count=280991, Max=4595, Min=14, Avg=33.91, 90=44, 99=65, 99.9=436, 99.99=556] 
+2023-12-21 13:00:23:615 60 sec: 1569553 operations; 28336.9 current ops/sec; est completion in 2 minutes [INSERT: Count=283377, Max=5815, Min=16, Avg=33.6, 90=44, 99=65, 99.9=246, 99.99=343] 
+2023-12-21 13:00:33:614 70 sec: 1879702 operations; 31014.9 current ops/sec; est completion in 2 minutes [INSERT: Count=310146, Max=3385, Min=13, Avg=30.58, 90=41, 99=53, 99.9=62, 99.99=92] 
+2023-12-21 13:00:43:614 80 sec: 2174513 operations; 29481.1 current ops/sec; est completion in 1 minute [INSERT: Count=294814, Max=3433, Min=13, Avg=32.29, 90=43, 99=55, 99.9=638, 99.99=763] 
+2023-12-21 13:00:53:614 90 sec: 2466122 operations; 29160.9 current ops/sec; est completion in 1 minute [INSERT: Count=291606, Max=1761, Min=14, Avg=32.71, 90=40, 99=69, 99.9=564, 99.99=623] 
+2023-12-21 13:01:03:614 100 sec: 2761054 operations; 29493.2 current ops/sec; est completion in 1 minute [INSERT: Count=294929, Max=16655, Min=13, Avg=32.23, 90=44, 99=63, 99.9=320, 99.99=465] 
+2023-12-21 13:01:13:614 110 sec: 3049598 operations; 28854.4 current ops/sec; est completion in 1 minute [INSERT: Count=288541, Max=17407, Min=15, Avg=33, 90=46, 99=63, 99.9=80, 99.99=136] 
+2023-12-21 13:01:23:614 120 sec: 3320431 operations; 27083.3 current ops/sec; est completion in 1 minute [INSERT: Count=270834, Max=16135, Min=13, Avg=35.26, 90=44, 99=218, 99.9=714, 99.99=1147] 
+2023-12-21 13:01:33:614 130 sec: 3576379 operations; 25594.8 current ops/sec; est completion in 1 minute [INSERT: Count=255947, Max=1847, Min=14, Avg=37.46, 90=44, 99=293, 99.9=792, 99.99=1185] 
+2023-12-21 13:01:43:614 140 sec: 3867166 operations; 29078.7 current ops/sec; est completion in 50 seconds [INSERT: Count=290791, Max=2665, Min=13, Avg=32.72, 90=44, 99=69, 99.9=419, 99.99=941] 
+2023-12-21 13:01:53:614 150 sec: 4162361 operations; 29519.5 current ops/sec; est completion in 39 seconds [INSERT: Count=295192, Max=1831, Min=15, Avg=32.26, 90=45, 99=62, 99.9=78, 99.99=100] 
+2023-12-21 13:02:03:614 160 sec: 4427658 operations; 26529.7 current ops/sec; est completion in 30 seconds [INSERT: Count=265291, Max=2921, Min=13, Avg=36.09, 90=44, 99=267, 99.9=764, 99.99=1568] 
+2023-12-21 13:02:13:614 170 sec: 4682781 operations; 25512.3 current ops/sec; est completion in 21 seconds [INSERT: Count=255117, Max=16927, Min=15, Avg=37.59, 90=45, 99=286, 99.9=752, 99.99=1361] 
+2023-12-21 13:02:23:614 180 sec: 4986027 operations; 30324.6 current ops/sec; est completion in 10 seconds [INSERT: Count=303259, Max=17215, Min=13, Avg=31.34, 90=43, 99=62, 99.9=305, 99.99=786] 
+2023-12-21 13:02:32:429 188 sec: 5242880 operations; 29138.17 current ops/sec; [CLEANUP: Count=1, Max=96895, Min=96832, Avg=96864, 90=96895, 99=96895, 99.9=96895, 99.99=96895] [INSERT: Count=256836, Max=2401, Min=15, Avg=32.29, 90=44, 99=61, 99.9=76, 99.99=111] 

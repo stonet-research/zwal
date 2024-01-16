@@ -1,0 +1,78 @@
+Nameless WALs: Opening character device: /dev/ng1n1
+MDTS 524288 
+Zasl is 4194304 4096 
+Register channel 0
+Register channel 1
+Register channel 2
+Register channel 3
+Register channel 4
+Register channel 5
+Register channel 6
+Register channel 7
+Nameless WALs: Opened character device
+Booting from modified ZenFS
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 8463319040 
+Last write (recover) 4: 0 4133150 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Set seed to 1705081288882051 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+WAL allocated for zones 4 to 7 
+Register channel 8
+Extent could not be found?
+Recovery time 8359176512, apply time 2594681617
+Recovery finished 1
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+Wal recovery, calls:32159 sum_time:5515297562 average:171500.903697 standard_dev:30703.330865 copy_sum:48065673 seq_read_sum:5298195860 sort_sum:4501717 decode:102251528
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    10
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    0.0 MB (estimated)
+FileSize:   0.0 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+DB path: [rocksdbtest/dbbench]
+WAL allocated for zones 7 to 10 
+Register channel 8
+overwrite    :     854.900 micros/op 1159 ops/sec 0.009 seconds 10 operations;    4.4 MB/s
+Microseconds per write:
+Count: 10 Average: 872.6000  StdDev: 1801.34
+Min: 16  Median: 20.8333  Max: 6013
+Percentiles: P50: 20.83 P75: 725.00 P99: 6013.00 P99.9: 6013.00 P99.99: 6013.00
+------------------------------------------------------
+(      15,      22 ]        6  60.000%  60.000% ############
+(      22,      34 ]        1  10.000%  70.000% ##
+(     580,     870 ]        1  10.000%  80.000% ##
+(    1300,    1900 ]        1  10.000%  90.000% ##
+(    4400,    6600 ]        1  10.000% 100.000% ##
+
+Last write (close) 7: 8192 1 
+Correct Nameless syncs:1 writes:10 ratio:10.000000
+Delete once log 
+Unegister channel 9

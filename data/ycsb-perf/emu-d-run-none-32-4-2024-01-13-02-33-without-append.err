@@ -1,0 +1,117 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadd -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadd -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-13 03:23:35:139 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+2024-01-13 03:23:45:099 10 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:23:55:099 20 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:05:099 30 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:15:099 40 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:25:098 50 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:35:098 60 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:45:099 70 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:24:55:099 80 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:05:098 90 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:15:098 100 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:25:098 110 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:35:098 120 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:45:098 130 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:25:55:098 140 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:05:098 150 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:15:098 160 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:25:098 170 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:35:098 180 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:45:098 190 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:26:55:098 200 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:05:098 210 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:15:098 220 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:25:098 230 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:35:098 240 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:45:098 250 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:27:55:098 260 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:05:098 270 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:15:098 280 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:25:098 290 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:35:098 300 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:45:098 310 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:28:55:098 320 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:05:098 330 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:15:098 340 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:25:099 350 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:35:098 360 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:45:099 370 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:29:55:098 380 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:05:098 390 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:15:099 400 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:25:098 410 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:35:098 420 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:45:098 430 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:30:55:100 440 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:05:098 450 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:15:098 460 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:25:098 470 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:35:100 480 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:45:098 490 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:31:55:098 500 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:05:100 510 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:15:100 520 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:25:109 530 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:35:099 540 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:45:099 550 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:32:55:102 560 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:05:098 570 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:15:098 580 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:25:098 590 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:35:098 600 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:45:098 610 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:33:55:099 620 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:05:099 630 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:15:099 640 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:25:098 650 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:35:118 660 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:45:134 670 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:34:55:103 680 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:05:119 690 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:15:109 700 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:25:103 710 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:35:098 720 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:45:100 730 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:35:55:098 740 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:05:098 750 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:15:098 760 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:25:100 770 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:35:098 780 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:45:098 790 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:36:55:101 800 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:05:098 810 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:15:098 820 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:25:098 830 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:35:098 840 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:45:098 850 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:37:55:098 860 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:38:05:098 870 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-13 03:38:15:098 880 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-01-13 03:38:25:098 890 sec: 25266 operations; 2526.6 current ops/sec; est completion in 9 hours 32 minutes [READ: Count=23982, Max=20847, Min=3, Avg=229.56, 90=605, 99=2525, 99.9=3533, 99.99=5563] [INSERT: Count=1289, Max=2925, Min=32, Avg=858.52, 90=1467, 99=2495, 99.9=2581, 99.99=2925] 
+2024-01-13 03:38:35:098 900 sec: 87293 operations; 6202.7 current ops/sec; est completion in 2 hours 36 minutes [READ: Count=58811, Max=19919, Min=6, Avg=126.02, 90=228, 99=2127, 99.9=2899, 99.99=4327] [INSERT: Count=3216, Max=6039, Min=42, Avg=759.77, 90=1305, 99=2443, 99.9=3319, 99.99=6039] 
+2024-01-13 03:38:45:099 910 sec: 145433 operations; 5814 current ops/sec; est completion in 1 hour 29 minutes [READ: Count=55139, Max=253823, Min=6, Avg=134.75, 90=210, 99=2279, 99.9=3987, 99.99=8519] [INSERT: Count=2998, Max=7291, Min=41, Avg=785.98, 90=1457, 99=2475, 99.9=6087, 99.99=7291] 
+2024-01-13 03:38:55:098 920 sec: 204906 operations; 5947.3 current ops/sec; est completion in 59 minutes [READ: Count=56490, Max=78143, Min=3, Avg=135.32, 90=268, 99=2107, 99.9=3143, 99.99=4731] [INSERT: Count=2985, Max=13239, Min=25, Avg=744.28, 90=1257, 99=2437, 99.9=3591, 99.99=13239] 
+2024-01-13 03:39:05:099 930 sec: 268763 operations; 6385.7 current ops/sec; est completion in 42 minutes [READ: Count=60682, Max=19439, Min=3, Avg=121.74, 90=211, 99=2113, 99.9=3683, 99.99=6471] [INSERT: Count=3175, Max=5555, Min=23, Avg=776.72, 90=1393, 99=2497, 99.9=3865, 99.99=5555] 
+2024-01-13 03:39:15:098 940 sec: 325244 operations; 5648.1 current ops/sec; est completion in 32 minutes [READ: Count=53728, Max=280319, Min=3, Avg=145.7, 90=314, 99=1635, 99.9=2617, 99.99=4367] [INSERT: Count=2759, Max=51743, Min=25, Avg=749.7, 90=1334, 99=1988, 99.9=2855, 99.99=51743] 
+2024-01-13 03:39:25:098 950 sec: 402256 operations; 7701.2 current ops/sec; est completion in 23 minutes [READ: Count=73273, Max=3909, Min=3, Avg=100.04, 90=205, 99=1316, 99.9=2337, 99.99=2741] [INSERT: Count=3730, Max=3429, Min=23, Avg=683.46, 90=1215, 99=1868, 99.9=2667, 99.99=3429] 
+2024-01-13 03:39:35:098 960 sec: 473683 operations; 7142.7 current ops/sec; est completion in 17 minutes [READ: Count=67860, Max=5123, Min=3, Avg=109.28, 90=234, 99=1379, 99.9=2307, 99.99=2837] [INSERT: Count=3574, Max=2587, Min=23, Avg=692.74, 90=1111, 99=1558, 99.9=2033, 99.99=2587] 
+2024-01-13 03:39:45:098 970 sec: 545664 operations; 7198.1 current ops/sec; est completion in 13 minutes [READ: Count=68425, Max=4963, Min=3, Avg=108.07, 90=239, 99=1438, 99.9=2307, 99.99=3155] [INSERT: Count=3550, Max=3299, Min=27, Avg=703.16, 90=1060, 99=1818, 99.9=2577, 99.99=3299] 
+2024-01-13 03:39:55:098 980 sec: 626945 operations; 8128.1 current ops/sec; est completion in 9 minutes [READ: Count=77191, Max=3029, Min=3, Avg=91.67, 90=204, 99=1237, 99.9=2229, 99.99=2637] [INSERT: Count=4097, Max=2949, Min=24, Avg=684.49, 90=1068, 99=1623, 99.9=2697, 99.99=2949] 
+2024-01-13 03:40:05:098 990 sec: 703684 operations; 7673.9 current ops/sec; est completion in 6 minutes [READ: Count=72859, Max=274687, Min=3, Avg=98.56, 90=205, 99=1338, 99.9=2265, 99.99=2701] [INSERT: Count=3872, Max=13543, Min=25, Avg=700.12, 90=1137, 99=1773, 99.9=2387, 99.99=13543] 
+2024-01-13 03:40:15:098 1000 sec: 782956 operations; 7927.2 current ops/sec; est completion in 4 minutes [READ: Count=75327, Max=4803, Min=3, Avg=96.16, 90=195, 99=1287, 99.9=2259, 99.99=2785] [INSERT: Count=3944, Max=2253, Min=24, Avg=671.21, 90=1189, 99=1538, 99.9=1901, 99.99=2253] 
+2024-01-13 03:40:25:098 1010 sec: 866028 operations; 8307.2 current ops/sec; est completion in 2 minutes [READ: Count=78948, Max=5207, Min=3, Avg=89.88, 90=184, 99=1320, 99.9=2249, 99.99=2845] [INSERT: Count=4127, Max=2955, Min=27, Avg=674.6, 90=1065, 99=1552, 99.9=1905, 99.99=2955] 
+2024-01-13 03:40:35:098 1020 sec: 952015 operations; 8598.7 current ops/sec; est completion in 52 seconds [READ: Count=81673, Max=3339, Min=3, Avg=84.14, 90=183, 99=1303, 99.9=2281, 99.99=2873] [INSERT: Count=4312, Max=3795, Min=23, Avg=696.81, 90=1101, 99=1579, 99.9=2503, 99.99=3795] 
+2024-01-13 03:40:40:883 1025 sec: 1000000 operations; 8296.16 current ops/sec; [READ: Count=45592, Max=3443, Min=3, Avg=71.99, 90=174, 99=1102, 99.9=2119, 99.99=2673] [CLEANUP: Count=1, Max=764927, Min=764416, Avg=764672, 90=764927, 99=764927, 99.9=764927, 99.99=764927] [INSERT: Count=2392, Max=2969, Min=25, Avg=697.94, 90=1127, 99=1585, 99.9=2739, 99.99=2969] 

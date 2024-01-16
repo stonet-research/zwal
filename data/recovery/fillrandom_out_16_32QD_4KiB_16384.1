@@ -1,0 +1,57 @@
+Booting from default ZenFS
+Set seed to 1704895690383686 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    16384
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    62.4 MB (estimated)
+FileSize:   31.3 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+DB path: [rocksdbtest/dbbench]
+fillrandom   :      38.084 micros/op 26256 ops/sec 0.624 seconds 16384 operations;  100.1 MB/s
+Microseconds per write:
+Count: 16384 Average: 38.0864  StdDev: 42.89
+Min: 5  Median: 41.9704  Max: 5489
+Percentiles: P50: 41.97 P75: 46.55 P99: 50.94 P99.9: 75.13 P99.99: 198.93
+------------------------------------------------------
+(       4,       6 ]       11   0.067%   0.067% 
+(       6,      10 ]      247   1.508%   1.575% 
+(      10,      15 ]       14   0.085%   1.660% 
+(      15,      22 ]        1   0.006%   1.666% 
+(      22,      34 ]      785   4.791%   6.458% #
+(      34,      51 ]    15216  92.871%  99.329% ###################
+(      51,      76 ]       97   0.592%  99.921% 
+(      76,     110 ]       10   0.061%  99.982% 
+(     110,     170 ]        1   0.006%  99.988% 
+(     170,     250 ]        1   0.006%  99.994% 
+(    4400,    6600 ]        1   0.006% 100.000% 
+

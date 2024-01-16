@@ -1,0 +1,36 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadc -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadc -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-01-12 21:13:01:241 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+2024-01-12 21:13:11:201 10 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-12 21:13:21:200 20 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+2024-01-12 21:13:31:200 30 sec: 0 operations; est completion in 106751991167300 days 15 hours 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-01-12 21:13:41:200 40 sec: 6227 operations; 622.7 current ops/sec; est completion in 1 hour 46 minutes [READ: Count=6230, Max=3627, Min=11, Avg=780.01, 90=1899, 99=3203, 99.9=3481, 99.99=3575] 
+2024-01-12 21:13:51:200 50 sec: 22517 operations; 1629 current ops/sec; est completion in 36 minutes [READ: Count=16288, Max=12119, Min=6, Avg=610.68, 90=1643, 99=3115, 99.9=3483, 99.99=3635] 
+2024-01-12 21:14:01:200 60 sec: 42933 operations; 2041.6 current ops/sec; est completion in 22 minutes [READ: Count=20419, Max=4015, Min=8, Avg=486.95, 90=1344, 99=3049, 99.9=3439, 99.99=3769] 
+2024-01-12 21:14:11:200 70 sec: 68637 operations; 2570.4 current ops/sec; est completion in 15 minutes [READ: Count=25701, Max=3833, Min=8, Avg=386.61, 90=1063, 99=2873, 99.9=3365, 99.99=3573] 
+2024-01-12 21:14:21:200 80 sec: 101610 operations; 3297.3 current ops/sec; est completion in 11 minutes [READ: Count=32977, Max=6399, Min=9, Avg=301.34, 90=810, 99=2755, 99.9=3317, 99.99=4083] 
+2024-01-12 21:14:31:200 90 sec: 143468 operations; 4185.8 current ops/sec; est completion in 8 minutes [READ: Count=41856, Max=12399, Min=8, Avg=237.17, 90=609, 99=2491, 99.9=3191, 99.99=8623] 
+2024-01-12 21:14:41:200 100 sec: 198038 operations; 5457 current ops/sec; est completion in 6 minutes [READ: Count=54572, Max=8207, Min=6, Avg=181.69, 90=308, 99=2193, 99.9=2907, 99.99=4375] 
+2024-01-12 21:14:51:200 110 sec: 271688 operations; 7365 current ops/sec; est completion in 4 minutes [READ: Count=73652, Max=6891, Min=5, Avg=134.43, 90=226, 99=1962, 99.9=2561, 99.99=3209] 
+2024-01-12 21:15:01:200 120 sec: 298750 operations; 2706.2 current ops/sec; est completion in 4 minutes [READ: Count=27059, Max=326143, Min=5, Avg=368.09, 90=672, 99=3085, 99.9=4299, 99.99=6499] 
+2024-01-12 21:15:11:200 130 sec: 335966 operations; 3721.6 current ops/sec; est completion in 4 minutes [READ: Count=37212, Max=6883, Min=5, Avg=267.25, 90=497, 99=2823, 99.9=4219, 99.99=5115] 
+2024-01-12 21:15:21:200 140 sec: 381986 operations; 4602 current ops/sec; est completion in 3 minutes [READ: Count=46021, Max=5195, Min=5, Avg=215.91, 90=481, 99=2243, 99.9=3601, 99.99=4331] 
+2024-01-12 21:15:31:200 150 sec: 467532 operations; 8554.6 current ops/sec; est completion in 2 minutes [READ: Count=85545, Max=279039, Min=5, Avg=115.6, 90=265, 99=735, 99.9=1920, 99.99=3053] 
+2024-01-12 21:15:41:200 160 sec: 547488 operations; 7995.6 current ops/sec; est completion in 2 minutes [READ: Count=79961, Max=4923, Min=5, Avg=123.73, 90=272, 99=1287, 99.9=2253, 99.99=2931] 
+2024-01-12 21:15:51:203 170 sec: 644706 operations; 9721.8 current ops/sec; est completion in 1 minute [READ: Count=97224, Max=4323, Min=5, Avg=101.6, 90=195, 99=1373, 99.9=2197, 99.99=2889] 
+2024-01-12 21:16:01:200 180 sec: 722871 operations; 7816.5 current ops/sec; est completion in 1 minute [READ: Count=78162, Max=4703, Min=5, Avg=126.65, 90=183, 99=1969, 99.9=2295, 99.99=3075] 
+2024-01-12 21:16:11:200 190 sec: 814645 operations; 9177.4 current ops/sec; est completion in 44 seconds [READ: Count=91766, Max=519679, Min=5, Avg=107.67, 90=162, 99=1617, 99.9=2225, 99.99=2963] 
+2024-01-12 21:16:21:200 200 sec: 891967 operations; 7732.2 current ops/sec; est completion in 25 seconds [READ: Count=77331, Max=4839, Min=5, Avg=128.07, 90=172, 99=2015, 99.9=2303, 99.99=3199] 
+2024-01-12 21:16:31:200 210 sec: 967825 operations; 7585.8 current ops/sec; est completion in 7 second [READ: Count=75854, Max=4855, Min=5, Avg=130.55, 90=187, 99=1998, 99.9=2299, 99.99=3019] 
+2024-01-12 21:16:36:277 215 sec: 1000000 operations; 6337.4 current ops/sec; [READ: Count=32170, Max=5447, Min=5, Avg=132.55, 90=198, 99=2014, 99.9=2323, 99.99=3025] [CLEANUP: Count=1, Max=770047, Min=769536, Avg=769792, 90=770047, 99=770047, 99.9=770047, 99.99=770047] 

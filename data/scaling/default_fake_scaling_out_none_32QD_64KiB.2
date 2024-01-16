@@ -1,0 +1,66 @@
+Booting from default ZenFS
+Set seed to 1705017062426320 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    1310720
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    4995.0 MB (estimated)
+FileSize:   2507.5 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+DB path: [rocksdbtest/dbbench]
+fillrandom   :      51.440 micros/op 19440 ops/sec 67.424 seconds 1310720 operations;   74.1 MB/s
+Microseconds per write:
+Count: 1310720 Average: 51.4401  StdDev: 177.09
+Min: 3  Median: 9.2343  Max: 9339
+Percentiles: P50: 9.23 P75: 13.61 P99: 829.85 P99.9: 1867.33 P99.99: 2810.75
+------------------------------------------------------
+(       2,       3 ]       58   0.004%   0.004% 
+(       3,       4 ]     2915   0.222%   0.227% 
+(       4,       6 ]   161290  12.305%  12.532% ##
+(       6,      10 ]   607358  46.338%  58.870% #########
+(      10,      15 ]   292719  22.333%  81.203% ####
+(      15,      22 ]   135197  10.315%  91.517% ##
+(      22,      34 ]    28436   2.169%  93.687% 
+(      34,      51 ]     2033   0.155%  93.842% 
+(      51,      76 ]      287   0.022%  93.864% 
+(      76,     110 ]       16   0.001%  93.865% 
+(     110,     170 ]        1   0.000%  93.865% 
+(     170,     250 ]        1   0.000%  93.865% 
+(     380,     580 ]    40959   3.125%  96.990% #
+(     580,     870 ]    30576   2.333%  99.323% 
+(     870,    1300 ]     4633   0.353%  99.676% 
+(    1300,    1900 ]     3099   0.236%  99.913% 
+(    1900,    2900 ]     1110   0.085%  99.998% 
+(    2900,    4400 ]       14   0.001%  99.999% 
+(    4400,    6600 ]        8   0.001%  99.999% 
+(    6600,    9900 ]       10   0.001% 100.000% 
+

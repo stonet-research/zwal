@@ -1,0 +1,78 @@
+Nameless WALs: Opening character device: /dev/ng2n2
+MDTS 524288 
+Register channel 0
+Register channel 1
+Register channel 2
+Register channel 3
+Register channel 4
+Register channel 5
+Register channel 6
+Register channel 7
+Nameless WALs: Opened character device
+Booting from modified ZenFS
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 65990656 
+Last write (recover) 4: 65990656 129304 
+Last write (close) 4: 65990656 0 
+Delete once log 
+Unegister channel 9
+Set seed to 1704767272323063 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+WAL allocated for zones 4 to 7 
+Register channel 8
+Extent could not be found?
+Recovery time 306185258, apply time 105161828
+Recovery finished 1
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+Wal recovery c:2010 s:188707705 a:93884.430348 st:1225722.237996
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    10
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    0.0 MB (estimated)
+FileSize:   0.0 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+DB path: [rocksdbtest/dbbench]
+WAL allocated for zones 7 to 10 
+Register channel 8
+overwrite    :     956.400 micros/op 1038 ops/sec 0.010 seconds 10 operations;    4.0 MB/s
+Microseconds per write:
+Count: 10 Average: 958.5000  StdDev: 1951.83
+Min: 8  Median: 18.5000  Max: 5884
+Percentiles: P50: 18.50 P75: 28.00 P99: 5884.00 P99.9: 5884.00 P99.99: 5884.00
+------------------------------------------------------
+(       6,      10 ]        1  10.000%  10.000% ##
+(      10,      15 ]        2  20.000%  30.000% ####
+(      15,      22 ]        4  40.000%  70.000% ########
+(      22,      34 ]        1  10.000%  80.000% ##
+(    2900,    4400 ]        1  10.000%  90.000% ##
+(    4400,    6600 ]        1  10.000% 100.000% ##
+
+Last write (close) 7: 40960 0 
+Correct Nameless syncs:0 writes:5 ratio:inf
+Delete once log 
+Unegister channel 9

@@ -1,0 +1,20 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/conf:/home/user/src/rocksdb-cheops-2024/ycsb/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/rocksdbjni-7.4.3-linux64.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/lib/libzbd.so.1:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/user/src/rocksdb-cheops-2024/rocksdb-ycsb/java/target/librocksdbjni-linux64.so:/home/user/src/rocksdb-cheops-2024/ycsb/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadd -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -s -P ./workloads/workloadd -p recordcount=5242880 -p operationcount=1000000 -p fieldlength=386 -p fieldcount=10 -t
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-12-21 00:27:46:813 0 sec: 0 operations; est completion in 0 second 
+Leet YCSB 
+[2023-12-21 00:27:50.220357] /home/user/src/TropoDB_uring/implementation/rocksdb/third-party/SimpleZNSDevice/szd/cpp/src/szd_channel.cpp: 400:DirectRead: *ERROR*: SZD: Channel: DirectRead: Could not read 2097152 2097152
+[2023-12-21 00:27:50.220562] /home/user/src/TropoDB_uring/implementation/rocksdb/third-party/SimpleZNSDevice/szd/cpp/src/datastructures/szd_once_log.cpp: 239:ReadAll: *ERROR*: SZD: Once log: ReadAll: Failed
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+[2023-12-21 00:27:50.251457] /home/user/src/TropoDB_uring/implementation/rocksdb/third-party/SimpleZNSDevice/szd/cpp/src/datastructures/szd_once_log.cpp: 141:AsyncAppend: *ERROR*: SZD: Once log: Async Append: No space left
+[2023-12-21 00:27:53.723591] /home/user/src/TropoDB_uring/implementation/rocksdb/third-party/SimpleZNSDevice/szd/cpp/src/datastructures/szd_once_log.cpp: 141:AsyncAppend: *ERROR*: SZD: Once log: Async Append: No space left
+[2023-12-21 00:27:53.723670] /home/user/src/TropoDB_uring/implementation/rocksdb/third-party/SimpleZNSDevice/szd/cpp/src/datastructures/szd_once_log.cpp: 141:AsyncAppend: *ERROR*: SZD: Once log: Async Append: No space left
+2023-12-21 00:27:53:727 6 sec: 1000000 operations; 143822.81 current ops/sec; [READ: Count=19, Max=495, Min=56, Avg=105.05, 90=120, 99=495, 99.9=495, 99.99=495] [CLEANUP: Count=1, Max=3173, Min=3172, Avg=3173, 90=3173, 99=3173, 99.9=3173, 99.99=3173] [READ-FAILED: Count=949739, Max=618, Min=0, Avg=0.16, 90=1, 99=1, 99.9=7, 99.99=15] [INSERT: Count=2, Max=1025, Min=174, Avg=599.5, 90=1025, 99=1025, 99.9=1025, 99.99=1025] [INSERT-FAILED: Count=50240, Max=11903, Min=18, Avg=34.33, 90=51, 99=61, 99.9=90, 99.99=190] 
