@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/solr7/src/main/java/site/ycsb/db/solr7/package-info.java">
+</file>
+<file name="/home/user/src/YCSB/solr7/src/main/java/site/ycsb/db/solr7/SolrClient.java">
+</file>
+<file name="/home/user/src/YCSB/solr7/src/main/resources/log4j.properties">
+</file>
+<file name="/home/user/src/YCSB/solr7/src/test/resources/log4j.properties">
+</file>
+</checkstyle>

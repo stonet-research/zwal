@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/rest/src/main/java/site/ycsb/webservice/rest/RestClient.java">
+</file>
+<file name="/home/user/src/YCSB/rest/src/main/java/site/ycsb/webservice/rest/package-info.java">
+</file>
+</checkstyle>

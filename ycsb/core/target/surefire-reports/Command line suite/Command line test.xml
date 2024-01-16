@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="stosys" failures="0" tests="41" name="site.ycsb.TestByteIterator" time="1.06" errors="0" timestamp="15 Jan 2024 22:56:27 GMT">
+  <testcase classname="site.ycsb.TestByteIterator" name="testRandomByteIterator" time="0.008"/>
+  <testcase classname="site.ycsb.TestNumericByteIterator" name="testDouble" time="0.001"/>
+  <testcase classname="site.ycsb.TestNumericByteIterator" name="testLong" time="0.001"/>
+  <testcase classname="site.ycsb.TestStatus" name="testAcceptableStatus" time="0.002"/>
+  <testcase classname="site.ycsb.TestUtils" name="bytesToDoubleTooShort" time="0.0"/>
+  <testcase classname="site.ycsb.TestUtils" name="bytesToFromDouble" time="0.0"/>
+  <testcase classname="site.ycsb.TestUtils" name="bytesToFromLong" time="0.0"/>
+  <testcase classname="site.ycsb.TestUtils" name="bytesToLongNull" time="0.0"/>
+  <testcase classname="site.ycsb.TestUtils" name="bytesToLongTooShort" time="0.001"/>
+  <testcase classname="site.ycsb.TestUtils" name="jvmUtils" time="0.056"/>
+  <testcase classname="site.ycsb.generator.AcknowledgedCounterGeneratorTest" name="testIncrementPastIntegerMaxValue" time="0.701"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="invalidCharacterSets" time="0.001"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="invalidLengths" time="0.001"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="rolloverException" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="rolloverOK" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="rolloverOneCharacterException" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestIncrementingPrintableStringGenerator" name="rolloverOneCharacterOK" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestRandomDiscreteTimestampGenerator" name="systemTime" time="0.001"/>
+  <testcase classname="site.ycsb.generator.TestRandomDiscreteTimestampGenerator" name="tooLarge" time="0.048"/>
+  <testcase classname="site.ycsb.generator.TestRandomDiscreteTimestampGenerator" name="withStartTime" time="0.001"/>
+  <testcase classname="site.ycsb.generator.TestUnixEpochTimestampGenerator" name="ctorWithIntervalAndUnits" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestUnixEpochTimestampGenerator" name="ctorWithIntervalAndUnitsAndStart" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestUnixEpochTimestampGenerator" name="defaultCtor" time="0.0"/>
+  <testcase classname="site.ycsb.generator.TestUnixEpochTimestampGenerator" name="variousIntervalsAndUnits" time="0.001"/>
+  <testcase classname="site.ycsb.generator.TestZipfianGenerator" name="testMinAndMaxParameter" time="0.006"/>
+  <testcase classname="site.ycsb.measurements.exporter.TestMeasurementsExporter" name="testJSONArrayMeasurementsExporter" time="0.185"/>
+  <testcase classname="site.ycsb.workloads.TestCoreWorkload" name="createOperationChooser" time="0.003"/>
+  <testcase classname="site.ycsb.workloads.TestCoreWorkload" name="createOperationChooserNullProperties" time="0.0"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="badTimeUnit" time="0.001"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="failedToInitThread" time="0.001"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="failedToInitWorkloadBeforeThreadInit" time="0.001"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertOneKeyOneTagCardinalityOne" time="0.003"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertOneKeyTwoTagsLowCardinality" time="0.002"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertThreeKeysTwoThreads" time="0.002"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertTwoKeysTwoTagsLowCardinality" time="0.001"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertTwoKeysTwoThreads" time="0.002"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="insertWithValidation" time="0.002"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="read" time="0.0"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="twoThreads" time="0.0"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="validateSettingsDataIntegrity" time="0.002"/>
+  <testcase classname="site.ycsb.workloads.TestTimeSeriesWorkload" name="verifyRow" time="0.01"/>
+</testsuite>

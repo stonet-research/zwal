@@ -1,0 +1,4 @@
+site/ycsb/db/ignite/IgniteClientTestBase.class
+site/ycsb/db/ignite/IgniteSqlClientTest.class
+site/ycsb/db/ignite/IgniteClientTest.class
+site/ycsb/db/ignite/IgniteSqlClientTest$1.class

@@ -1,0 +1,6 @@
+site/ycsb/db/ignite/IgniteClient.class
+site/ycsb/db/ignite/IgniteClient$Updater.class
+site/ycsb/db/ignite/IgniteAbstractClient.class
+site/ycsb/db/ignite/IgniteSqlClient.class
+site/ycsb/db/ignite/IgniteSqlClient$UpdateData.class
+site/ycsb/db/ignite/IgniteSqlClient$InsertData.class

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/infinispan/src/main/java/site/ycsb/db/RemoteCacheManagerHolder.java">
+</file>
+<file name="/home/user/src/YCSB/infinispan/src/main/java/site/ycsb/db/InfinispanRemoteClient.java">
+</file>
+<file name="/home/user/src/YCSB/infinispan/src/main/java/site/ycsb/db/InfinispanClient.java">
+</file>
+<file name="/home/user/src/YCSB/infinispan/src/main/java/site/ycsb/db/package-info.java">
+</file>
+</checkstyle>

@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">41</td><td class="numi">41</td><td class="numi">0</td><td class="numi">0</td><td class="numi">1.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Time<br/>(Msecs)</th></tr>
+<tr><th colspan="4">Command line test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m1"><b>insertWithValidation</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.TestByteIterator<td><a href="#m2"><b>testRandomByteIterator</b>  </a></td><td class="numi">1</td><td class="numi">8</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.workloads.TestCoreWorkload<td><a href="#m3"><b>createOperationChooserNullProperties</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m4"><b>verifyRow</b>  </a></td><td class="numi">1</td><td class="numi">10</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestRandomDiscreteTimestampGenerator<td><a href="#m5"><b>tooLarge</b>  </a></td><td class="numi">1</td><td class="numi">48</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.TestStatus<td><a href="#m6"><b>testAcceptableStatus</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m7"><b>invalidLengths</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="4">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m8"><b>insertOneKeyOneTagCardinalityOne</b>  </a></td><td class="numi">1</td><td class="numi">3</td></tr><tr class="passedeven"><td><a href="#m9"><b>read</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m10"><b>insertThreeKeysTwoThreads</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m11"><b>insertTwoKeysTwoTagsLowCardinality</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.TestUtils<td><a href="#m12"><b>bytesToFromDouble</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestUnixEpochTimestampGenerator<td><a href="#m13"><b>variousIntervalsAndUnits</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.TestUtils<td><a href="#m14"><b>bytesToLongNull</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestRandomDiscreteTimestampGenerator<td><a href="#m15"><b>withStartTime</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="2">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m16"><b>badTimeUnit</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m17"><b>insertTwoKeysTwoThreads</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.TestNumericByteIterator<td><a href="#m18"><b>testDouble</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestUnixEpochTimestampGenerator<td><a href="#m19"><b>defaultCtor</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m20"><b>rolloverOK</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestZipfianGenerator<td><a href="#m21"><b>testMinAndMaxParameter</b>  </a></td><td class="numi">1</td><td class="numi">6</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m22"><b>failedToInitThread</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.TestNumericByteIterator<td><a href="#m23"><b>testLong</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m24"><b>rolloverOneCharacterOK</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestUnixEpochTimestampGenerator<td><a href="#m25"><b>ctorWithIntervalAndUnits</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="2">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m26"><b>twoThreads</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m27"><b>validateSettingsDataIntegrity</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m28"><b>invalidCharacterSets</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.workloads.TestCoreWorkload<td><a href="#m29"><b>createOperationChooser</b>  </a></td><td class="numi">1</td><td class="numi">3</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.TestUtils<td><a href="#m30"><b>bytesToLongTooShort</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m31"><b>rolloverException</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="2">site.ycsb.TestUtils<td><a href="#m32"><b>bytesToFromLong</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr><tr class="passedodd"><td><a href="#m33"><b>jvmUtils</b>  </a></td><td class="numi">1</td><td class="numi">56</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.AcknowledgedCounterGeneratorTest<td><a href="#m34"><b>testIncrementPastIntegerMaxValue</b>  </a></td><td class="numi">1</td><td class="numi">701</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestRandomDiscreteTimestampGenerator<td><a href="#m35"><b>systemTime</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m36"><b>failedToInitWorkloadBeforeThreadInit</b>  </a></td><td class="numi">1</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.generator.TestIncrementingPrintableStringGenerator<td><a href="#m37"><b>rolloverOneCharacterException</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.TestUtils<td><a href="#m38"><b>bytesToDoubleTooShort</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.measurements.exporter.TestMeasurementsExporter<td><a href="#m39"><b>testJSONArrayMeasurementsExporter</b>  </a></td><td class="numi">1</td><td class="numi">185</td></tr>
+<tr class="passedeven"><td rowspan="1">site.ycsb.generator.TestUnixEpochTimestampGenerator<td><a href="#m40"><b>ctorWithIntervalAndUnitsAndStart</b>  </a></td><td class="numi">1</td><td class="numi">0</td></tr>
+<tr class="passedodd"><td rowspan="1">site.ycsb.workloads.TestTimeSeriesWorkload<td><a href="#m41"><b>insertOneKeyTwoTagsLowCardinality</b>  </a></td><td class="numi">1</td><td class="numi">2</td></tr>
+</table>
+<h1>Command line test</h1>
+<a id="m1"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertWithValidation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>site.ycsb.TestByteIterator:testRandomByteIterator</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>site.ycsb.workloads.TestCoreWorkload:createOperationChooserNullProperties</h2>
+<div style="padding-left:3em">
+<p>Properties object cannot be null</p>
+site.ycsb.workloads.CoreWorkload.createOperationGenerator(CoreWorkload.java:863)
+<br/>at site.ycsb.workloads.TestCoreWorkload.createOperationChooserNullProperties(TestCoreWorkload.java:68)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:verifyRow</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>site.ycsb.generator.TestRandomDiscreteTimestampGenerator:tooLarge</h2>
+<div style="padding-left:3em">
+<p>Too many intervals for the in-memory array. The limit is 16777216.</p>
+site.ycsb.generator.RandomDiscreteTimestampGenerator.setup(RandomDiscreteTimestampGenerator.java:99)
+<br/>at site.ycsb.generator.RandomDiscreteTimestampGenerator.&lt;init&gt;(RandomDiscreteTimestampGenerator.java:70)
+<br/>at site.ycsb.generator.TestRandomDiscreteTimestampGenerator.tooLarge(TestRandomDiscreteTimestampGenerator.java:69)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>site.ycsb.TestStatus:testAcceptableStatus</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:invalidLengths</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertOneKeyOneTagCardinalityOne</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:read</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertThreeKeysTwoThreads</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m11"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertTwoKeysTwoTagsLowCardinality</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>site.ycsb.TestUtils:bytesToFromDouble</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>site.ycsb.generator.TestUnixEpochTimestampGenerator:variousIntervalsAndUnits</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>site.ycsb.TestUtils:bytesToLongNull</h2>
+<div style="padding-left:3em">
+<p>null</p>
+site.ycsb.Utils.bytesToLong(Utils.java:75)
+<br/>at site.ycsb.TestUtils.bytesToLongNull(TestUtils.java:89)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m15"></a><h2>site.ycsb.generator.TestRandomDiscreteTimestampGenerator:withStartTime</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m16"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:badTimeUnit</h2>
+<div style="padding-left:3em">
+<p>Unknown time unit type</p>
+site.ycsb.workloads.TimeSeriesWorkload.init(TimeSeriesWorkload.java:625)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.getWorkload(TestTimeSeriesWorkload.java:512)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.badTimeUnit(TestTimeSeriesWorkload.java:109)
+<br/>36 lines not shown
+<p>Caused by No enum constant java.util.concurrent.TimeUnit.FOOBAR</p>
+java.base/java.lang.Enum.valueOf(Enum.java:240)
+<br/>at java.base/java.util.concurrent.TimeUnit.valueOf(TimeUnit.java:75)
+<br/>at site.ycsb.workloads.TimeSeriesWorkload.init(TimeSeriesWorkload.java:622)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.getWorkload(TestTimeSeriesWorkload.java:512)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.badTimeUnit(TestTimeSeriesWorkload.java:109)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m17"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertTwoKeysTwoThreads</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m18"></a><h2>site.ycsb.TestNumericByteIterator:testDouble</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m19"></a><h2>site.ycsb.generator.TestUnixEpochTimestampGenerator:defaultCtor</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m20"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:rolloverOK</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m21"></a><h2>site.ycsb.generator.TestZipfianGenerator:testMinAndMaxParameter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m22"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:failedToInitThread</h2>
+<div style="padding-left:3em">
+<p>Missing thread state.</p>
+site.ycsb.workloads.TimeSeriesWorkload.doInsert(TimeSeriesWorkload.java:699)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.failedToInitThread(TestTimeSeriesWorkload.java:129)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m23"></a><h2>site.ycsb.TestNumericByteIterator:testLong</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m24"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:rolloverOneCharacterOK</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m25"></a><h2>site.ycsb.generator.TestUnixEpochTimestampGenerator:ctorWithIntervalAndUnits</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m26"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:twoThreads</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m27"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:validateSettingsDataIntegrity</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m28"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:invalidCharacterSets</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m29"></a><h2>site.ycsb.workloads.TestCoreWorkload:createOperationChooser</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m30"></a><h2>site.ycsb.TestUtils:bytesToLongTooShort</h2>
+<div style="padding-left:3em">
+<p>Index 7 out of bounds for length 7</p>
+site.ycsb.Utils.bytesToLong(Utils.java:75)
+<br/>at site.ycsb.TestUtils.bytesToLongTooShort(TestUtils.java:94)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m31"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:rolloverException</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m32"></a><h2>site.ycsb.TestUtils:bytesToFromLong</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m33"></a><h2>site.ycsb.TestUtils:jvmUtils</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m34"></a><h2>site.ycsb.generator.AcknowledgedCounterGeneratorTest:testIncrementPastIntegerMaxValue</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m35"></a><h2>site.ycsb.generator.TestRandomDiscreteTimestampGenerator:systemTime</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m36"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:failedToInitWorkloadBeforeThreadInit</h2>
+<div style="padding-left:3em">
+<p>Workload has not been initialized.</p>
+site.ycsb.workloads.TimeSeriesWorkload.initThread(TimeSeriesWorkload.java:691)
+<br/>at site.ycsb.workloads.TestTimeSeriesWorkload.failedToInitWorkloadBeforeThreadInit(TestTimeSeriesWorkload.java:117)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m37"></a><h2>site.ycsb.generator.TestIncrementingPrintableStringGenerator:rolloverOneCharacterException</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m38"></a><h2>site.ycsb.TestUtils:bytesToDoubleTooShort</h2>
+<div style="padding-left:3em">
+<p>Byte array must be 8 bytes wide.</p>
+site.ycsb.Utils.bytesToDouble(Utils.java:114)
+<br/>at site.ycsb.TestUtils.bytesToDoubleTooShort(TestUtils.java:99)
+<br/>36 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m39"></a><h2>site.ycsb.measurements.exporter.TestMeasurementsExporter:testJSONArrayMeasurementsExporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m40"></a><h2>site.ycsb.generator.TestUnixEpochTimestampGenerator:ctorWithIntervalAndUnitsAndStart</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m41"></a><h2>site.ycsb.workloads.TestTimeSeriesWorkload:insertOneKeyTwoTagsLowCardinality</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

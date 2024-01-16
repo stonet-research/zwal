@@ -1,0 +1,315 @@
+diff --git a/rocksdb/pom.xml b/rocksdb/pom.xml
+index c1d34ccb..93ccb0ec 100644
+--- a/rocksdb/pom.xml
++++ b/rocksdb/pom.xml
+@@ -33,7 +33,25 @@ LICENSE file.
+     <dependency>
+       <groupId>org.rocksdb</groupId>
+       <artifactId>rocksdbjni</artifactId>
+-      <version>${rocksdb.version}</version>
++      <scope>system</scope>
++      <version>7.4.3-linux64</version>
++      <systemPath>/home/kd/opt/rocksdb2/java/target/rocksdbjni-7.4.3-linux64.jar</systemPath>
++    </dependency>
++    <dependency>
++      <groupId>org.rocksdb</groupId>
++      <artifactId>librocksdbjni</artifactId>
++      <scope>system</scope>
++      <version>linux64</version>
++      <type>so</type>
++      <systemPath>/home/kd/opt/rocksdb2/java/target/librocksdbjni-linux64.so</systemPath>
++    </dependency>
++    <dependency>
++      <groupId>org.rocksdb</groupId>
++      <artifactId>libzbd</artifactId>
++      <scope>system</scope>
++      <version>linux64</version>
++      <type>so</type>
++      <systemPath>/lib/libzbd.so.2</systemPath>
+     </dependency>
+     <dependency>
+       <groupId>site.ycsb</groupId>
+diff --git a/rocksdb/src/main/java/site/ycsb/db/rocksdb/RocksDBClient.java b/rocksdb/src/main/java/site/ycsb/db/rocksdb/RocksDBClient.java
+index 51d9067b..6457e208 100644
+--- a/rocksdb/src/main/java/site/ycsb/db/rocksdb/RocksDBClient.java
++++ b/rocksdb/src/main/java/site/ycsb/db/rocksdb/RocksDBClient.java
+@@ -61,10 +61,10 @@ public class RocksDBClient extends DB {
+   public void init() throws DBException {
+     synchronized(RocksDBClient.class) {
+       if(rocksDb == null) {
+-        rocksDbDir = Paths.get(getProperties().getProperty(PROPERTY_ROCKSDB_DIR));
+-        LOGGER.info("RocksDB data dir: " + rocksDbDir);
++        //rocksDbDir = Paths.get(getProperties().getProperty(PROPERTY_ROCKSDB_DIR));
++        //LOGGER.info("RocksDB data dir: " + rocksDbDir);
+ 
+-        String optionsFileString = getProperties().getProperty(PROPERTY_ROCKSDB_OPTIONS_FILE);
++        String optionsFileString = null; // getProperties().getProperty(PROPERTY_ROCKSDB_OPTIONS_FILE);
+         if (optionsFileString != null) {
+           optionsFile = Paths.get(optionsFileString);
+           LOGGER.info("RocksDB options file: " + optionsFile);
+@@ -126,9 +126,9 @@ public class RocksDBClient extends DB {
+    * @return The initialized and open RocksDB instance.
+    */
+   private RocksDB initRocksDB() throws IOException, RocksDBException {
+-    if(!Files.exists(rocksDbDir)) {
+-      Files.createDirectories(rocksDbDir);
+-    }
++    //if(!Files.exists(rocksDbDir)) {
++    //  Files.createDirectories(rocksDbDir);
++    //}
+ 
+     final List<String> cfNames = loadColumnFamilyNames();
+     final List<ColumnFamilyOptions> cfOptionss = new ArrayList<>();
+@@ -156,7 +156,8 @@ public class RocksDBClient extends DB {
+           .setMaxBackgroundCompactions(rocksThreads)
+           .setInfoLogLevel(InfoLogLevel.INFO_LEVEL);
+       dbOptions = options;
+-      return RocksDB.open(options, rocksDbDir.toAbsolutePath().toString());
++      return RocksDB.open(options, "hello_zenfs");
++      //rocksDbDir.toAbsolutePath().toString());
+     } else {
+       final DBOptions options = new DBOptions()
+           .setCreateIfMissing(true)
+@@ -165,9 +166,11 @@ public class RocksDBClient extends DB {
+           .setMaxBackgroundCompactions(rocksThreads)
+           .setInfoLogLevel(InfoLogLevel.INFO_LEVEL);
+       dbOptions = options;
++      options.setEnv(Env.getDefault());
+ 
+       final List<ColumnFamilyHandle> cfHandles = new ArrayList<>();
+-      final RocksDB db = RocksDB.open(options, rocksDbDir.toAbsolutePath().toString(), cfDescriptors, cfHandles);
++      final RocksDB db = RocksDB.open(options, "hello_zenfs", cfDescriptors, cfHandles); 
++      //rocksDbDir.toAbsolutePath().toString(), cfDescriptors, cfHandles);
+       for(int i = 0; i < cfNames.size(); i++) {
+         COLUMN_FAMILIES.put(cfNames.get(i), new ColumnFamily(cfHandles.get(i), cfOptionss.get(i)));
+       }
+@@ -323,7 +326,8 @@ public class RocksDBClient extends DB {
+   }
+ 
+   private void saveColumnFamilyNames() throws IOException {
+-    final Path file = rocksDbDir.resolve(COLUMN_FAMILY_NAMES_FILENAME);
++    // final Path file = rocksDbDir.resolve(COLUMN_FAMILY_NAMES_FILENAME);
++    final Path file = Path.of("/tmp/CFNAMES");
+     try(final PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file, UTF_8))) {
+       writer.println(new String(RocksDB.DEFAULT_COLUMN_FAMILY, UTF_8));
+       for(final String cfName : COLUMN_FAMILIES.keySet()) {
+@@ -334,7 +338,8 @@ public class RocksDBClient extends DB {
+ 
+   private List<String> loadColumnFamilyNames() throws IOException {
+     final List<String> cfNames = new ArrayList<>();
+-    final Path file = rocksDbDir.resolve(COLUMN_FAMILY_NAMES_FILENAME);
++    final Path file = Path.of("/tmp/CFNAMES");
++    //rocksDbDir.resolve(COLUMN_FAMILY_NAMES_FILENAME);
+     if(Files.exists(file)) {
+       try (final LineNumberReader reader =
+                new LineNumberReader(Files.newBufferedReader(file, UTF_8))) {
+diff --git a/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBClientTest.java b/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBClientTest.java
+deleted file mode 100644
+index be96ec33..00000000
+--- a/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBClientTest.java
++++ /dev/null
+@@ -1,123 +0,0 @@
+-/*
+- * Copyright (c) 2018 YCSB contributors. All rights reserved.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License"); you
+- * may not use this file except in compliance with the License. You
+- * may obtain a copy of the License at
+- *
+- * http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+- * implied. See the License for the specific language governing
+- * permissions and limitations under the License. See accompanying
+- * LICENSE file.
+- */
+-
+-package site.ycsb.db.rocksdb;
+-
+-import site.ycsb.ByteIterator;
+-import site.ycsb.Status;
+-import site.ycsb.StringByteIterator;
+-import site.ycsb.workloads.CoreWorkload;
+-import org.junit.*;
+-import org.junit.rules.TemporaryFolder;
+-
+-import java.util.*;
+-
+-import static org.junit.Assert.assertEquals;
+-
+-public class RocksDBClientTest {
+-
+-  @Rule
+-  public TemporaryFolder tmpFolder = new TemporaryFolder();
+-
+-  private static final String MOCK_TABLE = "ycsb";
+-  private static final String MOCK_KEY0 = "0";
+-  private static final String MOCK_KEY1 = "1";
+-  private static final String MOCK_KEY2 = "2";
+-  private static final String MOCK_KEY3 = "3";
+-  private static final int NUM_RECORDS = 10;
+-  private static final String FIELD_PREFIX = CoreWorkload.FIELD_NAME_PREFIX_DEFAULT;
+-
+-  private static final Map<String, ByteIterator> MOCK_DATA;
+-  static {
+-    MOCK_DATA = new HashMap<>(NUM_RECORDS);
+-    for (int i = 0; i < NUM_RECORDS; i++) {
+-      MOCK_DATA.put(FIELD_PREFIX + i, new StringByteIterator("value" + i));
+-    }
+-  }
+-
+-  private RocksDBClient instance;
+-
+-  @Before
+-  public void setup() throws Exception {
+-    instance = new RocksDBClient();
+-
+-    final Properties properties = new Properties();
+-    properties.setProperty(RocksDBClient.PROPERTY_ROCKSDB_DIR, tmpFolder.getRoot().getAbsolutePath());
+-    instance.setProperties(properties);
+-
+-    instance.init();
+-  }
+-
+-  @After
+-  public void tearDown() throws Exception {
+-    instance.cleanup();
+-  }
+-
+-  @Test
+-  public void insertAndRead() throws Exception {
+-    final Status insertResult = instance.insert(MOCK_TABLE, MOCK_KEY0, MOCK_DATA);
+-    assertEquals(Status.OK, insertResult);
+-
+-    final Set<String> fields = MOCK_DATA.keySet();
+-    final Map<String, ByteIterator> resultParam = new HashMap<>(NUM_RECORDS);
+-    final Status readResult = instance.read(MOCK_TABLE, MOCK_KEY0, fields, resultParam);
+-    assertEquals(Status.OK, readResult);
+-  }
+-
+-  @Test
+-  public void insertAndDelete() throws Exception {
+-    final Status insertResult = instance.insert(MOCK_TABLE, MOCK_KEY1, MOCK_DATA);
+-    assertEquals(Status.OK, insertResult);
+-
+-    final Status result = instance.delete(MOCK_TABLE, MOCK_KEY1);
+-    assertEquals(Status.OK, result);
+-  }
+-
+-  @Test
+-  public void insertUpdateAndRead() throws Exception {
+-    final Map<String, ByteIterator> newValues = new HashMap<>(NUM_RECORDS);
+-
+-    final Status insertResult = instance.insert(MOCK_TABLE, MOCK_KEY2, MOCK_DATA);
+-    assertEquals(Status.OK, insertResult);
+-
+-    for (int i = 0; i < NUM_RECORDS; i++) {
+-      newValues.put(FIELD_PREFIX + i, new StringByteIterator("newvalue" + i));
+-    }
+-
+-    final Status result = instance.update(MOCK_TABLE, MOCK_KEY2, newValues);
+-    assertEquals(Status.OK, result);
+-
+-    //validate that the values changed
+-    final Map<String, ByteIterator> resultParam = new HashMap<>(NUM_RECORDS);
+-    instance.read(MOCK_TABLE, MOCK_KEY2, MOCK_DATA.keySet(), resultParam);
+-
+-    for (int i = 0; i < NUM_RECORDS; i++) {
+-      assertEquals("newvalue" + i, resultParam.get(FIELD_PREFIX + i).toString());
+-    }
+-  }
+-
+-  @Test
+-  public void insertAndScan() throws Exception {
+-    final Status insertResult = instance.insert(MOCK_TABLE, MOCK_KEY3, MOCK_DATA);
+-    assertEquals(Status.OK, insertResult);
+-
+-    final Set<String> fields = MOCK_DATA.keySet();
+-    final Vector<HashMap<String, ByteIterator>> resultParam = new Vector<>(NUM_RECORDS);
+-    final Status result = instance.scan(MOCK_TABLE, MOCK_KEY3, NUM_RECORDS, fields, resultParam);
+-    assertEquals(Status.OK, result);
+-  }
+-}
+diff --git a/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBOptionsFileTest.java b/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBOptionsFileTest.java
+deleted file mode 100644
+index 5af15a3b..00000000
+--- a/rocksdb/src/test/java/site/ycsb/db/rocksdb/RocksDBOptionsFileTest.java
++++ /dev/null
+@@ -1,75 +0,0 @@
+-/*
+- * Copyright (c) 2019 YCSB contributors. All rights reserved.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License"); you
+- * may not use this file except in compliance with the License. You
+- * may obtain a copy of the License at
+- *
+- * http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+- * implied. See the License for the specific language governing
+- * permissions and limitations under the License. See accompanying
+- * LICENSE file.
+- */
+-
+-package site.ycsb.db.rocksdb;
+-
+-import org.junit.*;
+-import org.junit.rules.TemporaryFolder;
+-import org.rocksdb.*;
+-
+-import java.util.*;
+-
+-import static org.junit.Assert.assertEquals;
+-
+-public class RocksDBOptionsFileTest {
+-
+-  @Rule
+-  public TemporaryFolder tmpFolder = new TemporaryFolder();
+-
+-  private RocksDBClient instance;
+-
+-  @Test
+-  public void loadOptionsFromFile() throws Exception {
+-    final String optionsPath = RocksDBClient.class.getClassLoader().getResource("testcase.ini").getPath();
+-    final String dbPath = tmpFolder.getRoot().getAbsolutePath();
+-
+-    initDbWithOptionsFile(dbPath, optionsPath);
+-    checkOptions(dbPath);
+-  }
+-
+-  private void initDbWithOptionsFile(final String dbPath, final String optionsPath) throws Exception {
+-    instance = new RocksDBClient();
+-
+-    final Properties properties = new Properties();
+-    properties.setProperty(RocksDBClient.PROPERTY_ROCKSDB_DIR, dbPath);
+-    properties.setProperty(RocksDBClient.PROPERTY_ROCKSDB_OPTIONS_FILE, optionsPath);
+-    instance.setProperties(properties);
+-
+-    instance.init();
+-    instance.cleanup();
+-  }
+-
+-  private void checkOptions(final String dbPath) throws Exception {
+-    final List<ColumnFamilyDescriptor> cfDescriptors = new ArrayList<>();
+-    final DBOptions dbOptions = new DBOptions();
+-
+-    RocksDB.loadLibrary();
+-    OptionsUtil.loadLatestOptions(dbPath, Env.getDefault(), dbOptions, cfDescriptors);
+-
+-    try {
+-      assertEquals(dbOptions.walSizeLimitMB(), 42);
+-
+-      // the two CFs should be "default" and "usertable"
+-      assertEquals(cfDescriptors.size(), 2);
+-      assertEquals(cfDescriptors.get(0).getOptions().ttl(), 42);
+-      assertEquals(cfDescriptors.get(1).getOptions().ttl(), 42);
+-    }
+-    finally {
+-      dbOptions.close();
+-    }
+-  }
+-};

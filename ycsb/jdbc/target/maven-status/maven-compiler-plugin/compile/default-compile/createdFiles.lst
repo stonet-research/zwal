@@ -1,0 +1,10 @@
+site/ycsb/db/flavors/DBFlavor.class
+site/ycsb/db/StatementType.class
+site/ycsb/db/JdbcDBCreateTable.class
+site/ycsb/db/flavors/DefaultDBFlavor.class
+site/ycsb/db/flavors/DBFlavor$DBName.class
+site/ycsb/db/flavors/PhoenixDBFlavor.class
+site/ycsb/db/JdbcDBClient$OrderedFieldInfo.class
+site/ycsb/db/StatementType$Type.class
+site/ycsb/db/JdbcDBClient.class
+site/ycsb/db/JdbcDBCli.class
