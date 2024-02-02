@@ -2,6 +2,7 @@
 set -e
 dir="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 echo "Working dir: ${dir}"
+# JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 if [ $# != 6 ]; then
     echo "Build requires six args:" \
@@ -67,7 +68,7 @@ LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/home/user/src/spdk/dpdk/build/lib/" \
 echo "Completed building db_bench"
 
 # Install globally for ZenFS
-sudo LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/home/user/src/spdk/dpdk/build/lib/" \
+sudo LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${dir}/spdk/dpdk/build/lib/" \
     DEBUG_LEVEL=0 \
     DISABLE_WARNING_AS_ERROR=1 \
     ROCKSDB_PLUGINS=zenfs \
@@ -87,8 +88,7 @@ case $4 in
     y*)
         # Build jni
        echo "Building RocksDB JNI..."
-        LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/home/user/src/spdk/dpdk/build/lib/" \
-            JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 \
+        LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${dir}/spdk/dpdk/build/lib/" \
             DEBUG_LEVEL=0 \
             DISABLE_WARNING_AS_ERROR=1 \
             ROCKSDB_PLUGINS=zenfs \

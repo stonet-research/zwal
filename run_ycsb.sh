@@ -5,7 +5,6 @@ echo "Working dir: ${dir}"
 
 . run_util.sh
 
-
 if [ $# != 3 ]; then
     echo "Build requires two args:" \
          "1: nvme_device" \
@@ -62,8 +61,7 @@ for depth in 32; do
             run="$(date +"%Y-%m-%d-%H-%M")-${appendstr}"
             echo "run ${run}"
             pushd ycsb
-            sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/src/spdk/dpdk/build/lib/ \
-                ./bin/ycsb load rocksdb \
+            sudo ./bin/ycsb load rocksdb \
                 -s \
                 -P ./workloads/workload${workload} \
                 -p recordcount=${recordcount} \
@@ -73,8 +71,7 @@ for depth in 32; do
                     1> ../data/ycsb-perf/real-${workload}-load-${barrier}-${depth}-${bs}-${run}.out \
                     2> ../data/ycsb-perf/real-${workload}-load-${barrier}-${depth}-${bs}-${run}.err;
 
-            sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/src/spdk/dpdk/build/lib/ \
-                ./bin/ycsb run rocksdb \
+            sudo ./bin/ycsb run rocksdb \
                 -s \
                 -P ./workloads/workload${workload} \
                 -p recordcount=${recordcount} \
