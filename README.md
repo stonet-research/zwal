@@ -1,6 +1,6 @@
 # ZWAL : Rethinking Write-ahead Logs for ZNS SSDs
 
-ZWAL is a new WAL design for ZNS that uses `zone appends` instead of `writes`. It leads to significantly higher write throughput and concurrency compared to writes without resorting to buffered I/O on the host. The implementation is build on top of [ZNS](https://github.com/westerndigitalcorporation/zenfs).
+ZWAL is a new WAL design for ZNS that uses `zone appends` instead of `writes`. It leads to significantly higher write throughput and concurrency compared to writes without resorting to buffered I/O on the host. The implementation is build on top of [ZenFS](https://github.com/westerndigitalcorporation/zenfs).
 
 # Dependencies
 
