@@ -61,7 +61,10 @@ The data is stored in: `data/scaling/`. The `err_` files contain stderr and `out
 
 # WAL recovery
 
-To repeat the experiments necessary to get the data of figure 5, run:
+To repeat the experiments necessary to get the data of figure 5, we first have to enable various timers.
+To do this, change `//#define MEASURE_WAL_LAT` to `#define MEASURE_WAL_LAT` in `zenfs-appends/fs/io_zenfs.h`. Please comment the define again after the experiment.
+
+Then run (the build is done in the script):
 
 ```bash
 for i in 1 2 3 4 5; do bash ./run-zwal-recovery.sh <nvmexny> $i; done
