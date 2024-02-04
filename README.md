@@ -1,68 +1,59 @@
-# ZWAL
+# ZWAL : Rethinking Write-ahead Logs for ZNS SSDs
 
-# Motivation: Why use zone appends?
+ZWAL is a new WAL design for ZNS that uses `zone appends` instead of `writes`. It leads to significantly higher write throughput and concurrency compared to writes without resorting to buffered I/O on the host. The implementation is build on top of [ZNS](https://github.com/westerndigitalcorporation/zenfs).
 
-To repeat the experiment for `Motivation: Why use zone appends?`, first build our custom version of fio with:
+# Dependencies
+
+ZWALs have the same requirements as ZenFS. ZenFS depends on libzbd and Linux kernel 5.4 or later to perform zone management operations. To use ZenFS on SSDs with Zoned Namespaces, Linux kernel 5.9 or later is required. ZenFS works with RocksDB version v6.19.3 or later.
+
+Additionally, Linux with support for io_uring with NVMe passthrough is required (> 6.0).
+
+# Build
+
+ZWALs come with a number of configuration options that are defined in `#define`.
+These must be set before compilation. Apart from this the build is no different from ZenFS. ZWALs *do* require a specific change in RocksDB, hence we ship RocksDB along with ZWALs (see `rocksdb-raw`).
 
 ```bash
-pushd fio-with-appends
-./configure
+rm -r rocksdb-raw/plugin/zenfs
+cp zenfs plugin/zenfs-appends rocksdb-raw/plugin/zenfs
+
+# Set WAL buffersize
+BUFFSIZE=4
+sed -i "s/#define SPARSE_BUFFER_SIZE_IN_KB.*/#define SPARSE_BUFFER_SIZE_IN_KB ${BUFFSIZE}UL/g" rocksdb-raw/plugin/zenfs/fs/io_zenfs.h
+
+# set WAL max depth
+MAXWALDEPTH=32
+sed -i "s/NAMELESS_WAL_DEPTH.*/NAMELESS_WAL_DEPTH ${MAXWALDEPTH}/g" rocksdb-raw/plugin/zenfs/fs/zbd_zenfs.h
+
+# Set WAL barriersize
+WALBARRIERSIZE=16384
+sed -i "s/#define WAL_BARRIER_SIZE_IN_KB.*/#define WAL_BARRIER_SIZE_IN_KB ${6}UL/g" rocksdb-raw/plugin/zenfs/fs/io_zenfs.h
+
+cd rocksdb
+DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make -j48 db_bench
+sudo DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make install
+cd plugin/zenfs/util
 make
-popd
 ```
 
-Then run the experiment on a ZNS SSD with (WARNING deletes all data on the SSD):
+# Creating ZenFS with ZWALs
+
+The build procedure is the same as for ZenFS. However, we only evaluated extensively under the default configuration of:
 
 ```bash
-bash run-fio-scaling.sh <nvmexny>
+echo deadline | sudo tee /sys/class/block/<zoned block device>/queue/scheduler
+rocksdb-raw/plugin/zenfs/util/zenfs mkfs --zbd=<zoned block device> --aux_path=<path to store LOG and LOCK files>
 ```
 
-All data is stored in: `data/fio/f2_<nvmexny>_uring_*`.
-The format is `f2_<nvmexny>_uring_with_append_<bs>_<qd>` or `f2_<nvmexny>_uring_without_append_<bs>`.
+We provide no guarantees over other ZenFS functionalities.
 
-Note that we do not include scripts/data for different blocksizes than 8192, this is, however, trivial to change. Change the `for bs in 8192` in the bash script.
+# Structure of this repository
 
-# WAL write performance
-
-To repeat the experiments necessary to get the data of figure 4, run:
-
-```bash
-for i in 1 2 3; do bash ./run-zwal-scaling.sh <nvmexny> $i; done
-```
-
-This script builds all tooling automatically.
-
-The data is stored in: `data/scaling/`. The `err_` files contain stderr and `out_` stdout. The general format is `<barrier_size>_<QD>QD_<BS>KiB.<runid>` with appends and `none_<BS>KiB.<runid>` without.
-
-# WAL recovery
-
-To repeat the experiments necessary to get the data of figure 5, run:
-
-```bash
-for i in 1 2 3 4 5; do bash ./run-zwal-recovery.sh <nvmexny> $i; done
-```
-
-This script builds all tooling automatically.
-
-The data is stored in: `data/recovery/`. The `overwrite_err_` files contain stderr and `overwrite_out_` stdout. The general format is `<barrier_size>_<QD>QD_<BS>KiB.<runid>` with appends and `none_<QD>QD_<BS>KiB.<runid>` without.
-
-# YCSB
-
-To repeat the experiments necessary to get the data of figure 6, run:
-
-```bash
-# Commercial SSD, appends
-bash ./run-zwal-ycsb.sh <nvmexny> y y
-# Commercial SSD, writes
-bash ./run-zwal-ycsb.sh <nvmexny> y n
-# Emulated SSD, appends
-bash ./run-zwal-ycsb.sh <nvmexny> n y
-# Emulated SSD, writes
-bash ./run-zwal-ycsb.sh <nvmexny> n n
-```
-
-The data is stored in: `data/ycsb/`. Data for the commercial device is stored in `real*`, for the emulated device in `emu*`. The rest of the file format is `<workload>-load-<barriersize>-<datetime>.out` for loading the workload and `<workload>-run-<barriersize>-<datetime>.out` for running the workload. Note that ZenFS without appends uses a barrier of `none`.
-
-# Barrier size
-
-All data for the barrier size is already present in `WAL write performance` and `WAL recovery`, no additional experiment needs to be run.
+* `zenfs-appends`: ZenFS with ZWALs implemented.
+* `zenfs-default`: Standard ZenFS (included for easy experimentation). We added support for variable buffer sizes.
+* `rocksdb-raw`: RocksDB modified to delete WALs instantly instead of archiving them
+* `rocksdb-ycsb`: The same as `rocksdb-raw`, but always forces RocksDB to use ZenFS. Necessary to use with YCSB.
+* `ycsb`: The YCSB benchmark, modified to support RocksDB with ZenFS
+* `data`: raw data from all our experiments
+* `fio-with-appends`: fio modified to support appends for io_uring with NVMe passthrough
+* `AE.md`: Artifact Evaluation. Contains a description of how to reproduce all results from the paper.
