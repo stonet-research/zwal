@@ -1,0 +1,45 @@
+# Workflow for triggering tests/long_performance
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 21 * * sun'
+name: Long Performance Test
+jobs:
+  long-performance:
+    name: Long Performance
+    runs-on: self-hosted
+    timeout-minutes: 4320
+    strategy:
+      matrix:
+        drive-size: [1TB]
+    steps:
+      - name: Clean
+        run: rm -rf ${GITHUB_WORKSPACE}/*
+      - name: Checkout build scripts
+        run: git clone ~/harness.git
+      - name: Checkout zbdbench
+        uses: actions/checkout@v2
+        with:
+          repository: westerndigitalcorporation/zbdbench
+          ref: v0.1.1
+          path: harness/rocksdb-context/zbdbench
+      - name: Checkout rocksdb
+        uses: actions/checkout@v2
+        with:
+          repository: facebook/rocksdb
+          ref: v7.0.2
+          path: harness/rocksdb-context/rocksdb
+      - name: Checkout zenfs
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          path: harness/rocksdb-context/rocksdb/plugin/zenfs
+      - name: Run long performance test ${{ matrix.drive-size }}
+        run: cd harness && st --silent -o logs/make -- disk-select --disk ${{ matrix.drive-size }} -- make NO_VAGRANT=1 results/zenfs-long.xml 
+      - name: Collect Results ${{ matrix.drive-size }}
+        run: cd harness && make NO_VAGRANT=1 upload 
+        if: always()
+      - name: Remove images
+        run: podman rmi --force --all
+        if: always()
+

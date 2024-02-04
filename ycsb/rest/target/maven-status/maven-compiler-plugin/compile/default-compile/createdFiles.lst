@@ -1,0 +1,4 @@
+site/ycsb/webservice/rest/RestClient.class
+site/ycsb/webservice/rest/RestClient$Timer.class
+site/ycsb/webservice/rest/RestClient$Criteria.class
+site/ycsb/webservice/rest/RestClient$TimeoutException.class

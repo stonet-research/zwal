@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/arangodb/src/main/java/site/ycsb/db/arangodb/ArangoDBClient.java">
+</file>
+<file name="/home/user/src/YCSB/arangodb/src/main/java/site/ycsb/db/arangodb/package-info.java">
+</file>
+</checkstyle>

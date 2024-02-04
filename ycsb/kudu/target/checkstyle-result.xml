@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/kudu/src/main/java/site/ycsb/db/KuduYCSBClient.java">
+</file>
+<file name="/home/user/src/YCSB/kudu/src/main/java/site/ycsb/db/package-info.java">
+</file>
+<file name="/home/user/src/YCSB/kudu/src/main/resources/log4j.properties">
+</file>
+</checkstyle>

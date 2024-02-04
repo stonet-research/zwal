@@ -1,0 +1,3 @@
+site/ycsb/db/RemoteCacheManagerHolder.class
+site/ycsb/db/InfinispanClient.class
+site/ycsb/db/InfinispanRemoteClient.class

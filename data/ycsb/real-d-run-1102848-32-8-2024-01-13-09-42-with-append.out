@@ -1,0 +1,171 @@
+Nameless WALs: Opening character device: /dev/ng0n2
+MDTS 524288 
+Register channel 0
+Register channel 1
+Register channel 2
+Register channel 3
+Register channel 4
+Register channel 5
+Register channel 6
+Register channel 7
+Nameless WALs: Opened character device
+Booting from modified ZenFS
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 7 to 10 
+Register channel 8
+WAL size 0 
+Last write (recover) 7: 0 2205696 
+Last write (close) 7: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 5: 1014654976 1988150 
+Last write (recover) 8: 1014642688 1988828 
+Last write (recover) 3735928559: 1012653860 0 
+Last write (recover) 3735928559: 1012666826 0 
+WAL allocated for zones 10 to 13 
+Register channel 8
+WAL size 1134379008 
+Last write (recover) 10: 0 2205696 
+Last write (close) 10: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 11: 1014650880 1987736 
+Last write (recover) 5: 1014663168 1987011 
+Last write (recover) 3735928559: 1012676157 0 
+Last write (recover) 3735928559: 1012663144 0 
+WAL allocated for zones 7 to 10 
+Register channel 8
+WAL size 0 
+Last write (recover) 7: 0 2205696 
+Last write (close) 7: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 8: 1014659072 1987834 
+Last write (recover) 5: 1014659072 1986406 
+Last write (recover) 3735928559: 1012672666 0 
+Last write (recover) 3735928559: 1012671238 0 
+WAL allocated for zones 10 to 13 
+Register channel 8
+WAL size 1134379008 
+Last write (recover) 10: 0 2205696 
+Last write (close) 10: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 11: 1014663168 1988235 
+Last write (recover) 5: 1014659072 1989795 
+Last write (recover) 3735928559: 1012669277 0 
+Last write (recover) 3735928559: 1012674933 0 
+WAL allocated for zones 7 to 10 
+Register channel 8
+WAL size 0 
+Last write (recover) 7: 0 2205696 
+Last write (close) 7: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 8: 1014671360 1989141 
+Last write (recover) 5: 1014659072 1988539 
+Last write (recover) 3735928559: 1012670533 0 
+Last write (recover) 3735928559: 1012682219 0 
+WAL allocated for zones 10 to 13 
+Register channel 8
+WAL size 1134379008 
+Last write (recover) 10: 0 2205696 
+Last write (close) 10: 0 0 
+Delete once log 
+Unegister channel 9
+Last write (recover) 3735928559: 0 0 
+Last write (recover) 3735928559: 0 0 
+WAL allocated for zones 4 to 7 
+Register channel 8
+WAL size 0 
+Last write (recover) 4: 0 2205696 
+Last write (close) 4: 0 0 
+Delete once log 
+Unegister channel 9
+La[OVERALL], RunTime(ms), 85948
+[OVERALL], Throughput(ops/sec), 11634.942057988552
+[TOTAL_GCS_G1_Young_Generation], Count, 4
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 23
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.026760366733373665
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 4
+[TOTAL_GC_TIME], Time(ms), 23
+[TOTAL_GC_TIME_%], Time(%), 0.026760366733373665
+[READ], Operations, 950326
+[READ], AverageLatency(us), 67.59737079696862
+[READ], MinLatency(us), 2
+[READ], MaxLatency(us), 159999
+[READ], 95thPercentileLatency(us), 362
+[READ], 99thPercentileLatency(us), 712
+[READ], Return=OK, 950326
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 217408.0
+[CLEANUP], MinLatency(us), 217344
+[CLEANUP], MaxLatency(us), 217471
+[CLEANUP], 95thPercentileLatency(us), 217471
+[CLEANUP], 99thPercentileLatency(us), 217471
+[INSERT], Operations, 49674
+[INSERT], AverageLatency(us), 25.323690461811008
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 11975
+[INSERT], 95thPercentileLatency(us), 43
+[INSERT], 99thPercentileLatency(us), 57
+[INSERT], Return=OK, 49674

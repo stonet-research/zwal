@@ -1,0 +1,42 @@
+Booting from default ZenFS
+Set seed to 1705080525692800 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovery time 84067446032, apply time 3027787007
+Recovery finished 1
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    10
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    0.0 MB (estimated)
+FileSize:   0.0 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+DB path: [rocksdbtest/dbbench]
+overwrite    :     541.000 micros/op 1825 ops/sec 0.005 seconds 10 operations;    7.0 MB/s
+Microseconds per write:
+Count: 10 Average: 561.9000  StdDev: 1671.03
+Min: 3  Median: 4.5000  Max: 5575
+Percentiles: P50: 4.50 P75: 5.75 P99: 5575.00 P99.9: 5575.00 P99.99: 5575.00
+------------------------------------------------------
+(       2,       3 ]        2  20.000%  20.000% ####
+(       3,       4 ]        2  20.000%  40.000% ####
+(       4,       6 ]        4  40.000%  80.000% ########
+(       6,      10 ]        1  10.000%  90.000% ##
+(    4400,    6600 ]        1  10.000% 100.000% ##
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/riak/src/main/java/site/ycsb/db/riak/RiakKVClient.java">
+</file>
+<file name="/home/user/src/YCSB/riak/src/main/java/site/ycsb/db/riak/package-info.java">
+</file>
+<file name="/home/user/src/YCSB/riak/src/main/java/site/ycsb/db/riak/RiakUtils.java">
+</file>
+<file name="/home/user/src/YCSB/riak/src/main/resources/riak.properties">
+</file>
+</checkstyle>

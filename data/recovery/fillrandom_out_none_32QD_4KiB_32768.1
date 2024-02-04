@@ -1,0 +1,57 @@
+Booting from default ZenFS
+Set seed to 1705078990169331 because --seed was 0
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     3980 bytes each (1990 bytes after compression)
+Entries:    32768
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    124.9 MB (estimated)
+FileSize:   62.7 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: NoCompression
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 1
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+Recovered 
+s = recovered (1)
+s = createdwal (1)
+s = LogAndApply (1)
+s = Succeeded (1)
+opened
+opened nested 2
+opened nested 2-1
+DB path: [rocksdbtest/dbbench]
+fillrandom   :     511.805 micros/op 1953 ops/sec 16.771 seconds 32768 operations;    7.4 MB/s
+Microseconds per write:
+Count: 32768 Average: 511.8025  StdDev: 72.99
+Min: 6  Median: 478.6085  Max: 5454
+Percentiles: P50: 478.61 P75: 529.61 P99: 578.58 P99.9: 782.18 P99.99: 1025.49
+------------------------------------------------------
+(       4,       6 ]        2   0.006%   0.006% 
+(       6,      10 ]      322   0.983%   0.989% 
+(      10,      15 ]      133   0.406%   1.395% 
+(      15,      22 ]       59   0.180%   1.575% 
+(      22,      34 ]       29   0.089%   1.663% 
+(      34,      51 ]        1   0.003%   1.666% 
+(     380,     580 ]    32123  98.032%  99.698% ####################
+(     580,     870 ]       95   0.290%  99.988% 
+(     870,    1300 ]        2   0.006%  99.994% 
+(    1900,    2900 ]        1   0.003%  99.997% 
+(    4400,    6600 ]        1   0.003% 100.000% 
+

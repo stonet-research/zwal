@@ -1,0 +1,3 @@
+site/ycsb/db/elasticsearch5/ElasticsearchRestClientIT.class
+site/ycsb/db/elasticsearch5/ElasticsearchClientIT.class
+site/ycsb/db/elasticsearch5/ElasticsearchIntegTestBase.class

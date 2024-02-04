@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.2">
+<file name="/home/user/src/YCSB/crail/src/main/java/site/ycsb/db/crail/package-info.java">
+</file>
+<file name="/home/user/src/YCSB/crail/src/main/java/site/ycsb/db/crail/CrailClient.java">
+</file>
+</checkstyle>

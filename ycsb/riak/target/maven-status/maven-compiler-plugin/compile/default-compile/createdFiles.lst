@@ -1,0 +1,4 @@
+site/ycsb/db/riak/RiakKVClient$1.class
+site/ycsb/db/riak/RiakKVClient.class
+site/ycsb/db/riak/RiakUtils.class
+site/ycsb/db/riak/RiakKVClient$UpdateEntity.class
