@@ -25,7 +25,7 @@ sed -i "s/NAMELESS_WAL_DEPTH.*/NAMELESS_WAL_DEPTH ${MAXWALDEPTH}/g" rocksdb-raw/
 
 # Set WAL barriersize
 WALBARRIERSIZE=16384
-sed -i "s/#define WAL_BARRIER_SIZE_IN_KB.*/#define WAL_BARRIER_SIZE_IN_KB ${6}UL/g" rocksdb-raw/plugin/zenfs/fs/io_zenfs.h
+sed -i "s/#define WAL_BARRIER_SIZE_IN_KB.*/#define WAL_BARRIER_SIZE_IN_KB ${WALBARRIERSIZE}UL/g" rocksdb-raw/plugin/zenfs/fs/io_zenfs.h
 
 cd rocksdb
 DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make -j48 db_bench
