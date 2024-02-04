@@ -1,5 +1,6 @@
-Nameless WALs: Opening character device: /dev/ng2n2
+Nameless WALs: Opening character device: /dev/ng1n1
 MDTS 524288 
+Zasl is 4194304 4096 
 Register channel 0
 Register channel 1
 Register channel 2
@@ -16,25 +17,25 @@ Last write (recover) 3735928559: 0 0
 Last write (recover) 3735928559: 0 0 
 WAL allocated for zones 4 to 7 
 Register channel 8
-WAL size 528957440 
+WAL size 4231659520 
 Last write (recover) 4: 16384 2066575 
 Last write (close) 4: 16384 0 
 Delete once log 
 Unegister channel 9
-Set seed to 1704756319009015 because --seed was 0
+Set seed to 1705081948504817 because --seed was 0
 Initializing RocksDB Options from the specified file
 Initializing RocksDB Options from command-line flags
 Integrated BlobDB: blob cache disabled
 WAL allocated for zones 4 to 7 
 Register channel 8
 Extent could not be found?
-Recovery time 2283941502, apply time 1093119348
+Recovery time 3880287318, apply time 1084523849
 Recovery finished 1
 Recovered 
 s = recovered (1)
 s = createdwal (1)
 s = LogAndApply (1)
-Wal recovery c:16080 s:1068688224 a:66460.710448 st:30561.425085
+Wal recovery, calls:16080 sum_time:2684857706 average:166968.762811 standard_dev:22646.430800 copy_sum:22658478 seq_read_sum:2590500462 sort_sum:1260376 decode:42074240
 Last write (close) 4: 0 0 
 Delete once log 
 Unegister channel 9
@@ -59,16 +60,16 @@ Perf Level: 1
 DB path: [rocksdbtest/dbbench]
 WAL allocated for zones 7 to 10 
 Register channel 8
-overwrite    :     944.200 micros/op 1054 ops/sec 0.009 seconds 10 operations;    4.0 MB/s
+overwrite    :     803.700 micros/op 1222 ops/sec 0.008 seconds 10 operations;    4.7 MB/s
 Microseconds per write:
-Count: 10 Average: 963.0000  StdDev: 1976.91
-Min: 8  Median: 15.0000  Max: 5984
-Percentiles: P50: 15.00 P75: 20.83 P99: 5984.00 P99.9: 5984.00 P99.99: 5984.00
+Count: 10 Average: 814.2000  StdDev: 1655.56
+Min: 15  Median: 18.5000  Max: 5501
+Percentiles: P50: 18.50 P75: 725.00 P99: 5501.00 P99.9: 5501.00 P99.99: 5501.00
 ------------------------------------------------------
-(       6,      10 ]        4  40.000%  40.000% ########
-(      10,      15 ]        1  10.000%  50.000% ##
-(      15,      22 ]        3  30.000%  80.000% ######
-(    2900,    4400 ]        1  10.000%  90.000% ##
+(      10,      15 ]        3  30.000%  30.000% ######
+(      15,      22 ]        4  40.000%  70.000% ########
+(     580,     870 ]        1  10.000%  80.000% ##
+(    1300,    1900 ]        1  10.000%  90.000% ##
 (    4400,    6600 ]        1  10.000% 100.000% ##
 
 Last write (close) 7: 8192 1 

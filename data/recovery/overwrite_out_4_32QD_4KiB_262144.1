@@ -1,5 +1,6 @@
-Nameless WALs: Opening character device: /dev/ng2n2
+Nameless WALs: Opening character device: /dev/ng1n1
 MDTS 524288 
+Zasl is 4194304 4096 
 Register channel 0
 Register channel 1
 Register channel 2
@@ -16,25 +17,25 @@ Last write (recover) 3735928559: 0 0
 Last write (recover) 3735928559: 0 0 
 WAL allocated for zones 4 to 7 
 Register channel 8
-WAL size 1057914880 
+WAL size 8463319040 
 Last write (recover) 4: 0 4133150 
 Last write (close) 4: 0 0 
 Delete once log 
 Unegister channel 9
-Set seed to 1704897137575812 because --seed was 0
+Set seed to 1705083214575715 because --seed was 0
 Initializing RocksDB Options from the specified file
 Initializing RocksDB Options from command-line flags
 Integrated BlobDB: blob cache disabled
 WAL allocated for zones 4 to 7 
 Register channel 8
 Extent could not be found?
-Recovery time 8505569775, apply time 2252892740
+Recovery time 33088624335, apply time 3324526194
 Recovery finished 1
 Recovered 
 s = recovered (1)
 s = createdwal (1)
 s = LogAndApply (1)
-Wal recovery c:32159 s:6030748055 a:187529.091545 st:26203.787353
+Wal recovery, calls:32159 sum_time:29479936798 average:916693.205572 standard_dev:45590.372863 copy_sum:50368711 seq_read_sum:29158791408 sort_sum:17295599 decode:126439490
 Last write (close) 4: 0 0 
 Delete once log 
 Unegister channel 9
@@ -59,16 +60,15 @@ Perf Level: 1
 DB path: [rocksdbtest/dbbench]
 WAL allocated for zones 7 to 10 
 Register channel 8
-overwrite    :     983.600 micros/op 1009 ops/sec 0.010 seconds 10 operations;    3.8 MB/s
+overwrite    :    1144.200 micros/op 866 ops/sec 0.012 seconds 10 operations;    3.3 MB/s
 Microseconds per write:
-Count: 10 Average: 1006.1000  StdDev: 2040.69
-Min: 25  Median: 38.2500  Max: 6281
-Percentiles: P50: 38.25 P75: 48.88 P99: 6281.00 P99.9: 6281.00 P99.99: 6281.00
+Count: 10 Average: 1161.5000  StdDev: 1866.33
+Min: 484  Median: 505.0000  Max: 6756
+Percentiles: P50: 505.00 P75: 567.50 P99: 6756.00 P99.9: 6756.00 P99.99: 6756.00
 ------------------------------------------------------
-(      22,      34 ]        4  40.000%  40.000% ########
-(      34,      51 ]        4  40.000%  80.000% ########
-(    2900,    4400 ]        1  10.000%  90.000% ##
-(    4400,    6600 ]        1  10.000% 100.000% ##
+(     380,     580 ]        8  80.000%  80.000% ################
+(     580,     870 ]        1  10.000%  90.000% ##
+(    6600,    9900 ]        1  10.000% 100.000% ##
 
 Last write (close) 7: 4096 9 
 Correct Nameless syncs:9 writes:10 ratio:1.111111

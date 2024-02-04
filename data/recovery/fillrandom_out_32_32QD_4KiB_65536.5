@@ -1,5 +1,6 @@
-Nameless WALs: Opening character device: /dev/ng2n2
+Nameless WALs: Opening character device: /dev/ng1n1
 MDTS 524288 
+Zasl is 4194304 4096 
 Register channel 0
 Register channel 1
 Register channel 2
@@ -10,7 +11,7 @@ Register channel 6
 Register channel 7
 Nameless WALs: Opened character device
 Booting from modified ZenFS
-Set seed to 1704765428407146 because --seed was 0
+Set seed to 1705082626244382 because --seed was 0
 Initializing RocksDB Options from the specified file
 Initializing RocksDB Options from command-line flags
 Integrated BlobDB: blob cache disabled
@@ -50,25 +51,25 @@ opened nested 2-1
 DB path: [rocksdbtest/dbbench]
 WAL allocated for zones 4 to 7 
 Register channel 8
-fillrandom   :      16.550 micros/op 60413 ops/sec 1.085 seconds 65536 operations;  230.2 MB/s
+fillrandom   :     244.882 micros/op 4083 ops/sec 16.049 seconds 65536 operations;   15.6 MB/s
 Microseconds per write:
-Count: 65536 Average: 16.5499  StdDev: 25.33
-Min: 4  Median: 14.0317  Max: 5416
-Percentiles: P50: 14.03 P75: 18.25 P99: 33.63 P99.9: 50.30 P99.99: 193.14
+Count: 65536 Average: 244.8835  StdDev: 563.32
+Min: 5  Median: 34.0708  Max: 5961
+Percentiles: P50: 34.07 P75: 47.40 P99: 1851.63 P99.9: 1895.50 P99.99: 1899.88
 ------------------------------------------------------
-(       3,       4 ]        1   0.002%   0.002% 
-(       4,       6 ]       16   0.024%   0.026% 
-(       6,      10 ]      675   1.030%   1.056% 
-(      10,      15 ]    39780  60.699%  61.755% ############
-(      15,      22 ]    18704  28.540%  90.295% ######
-(      22,      34 ]     5888   8.984%  99.280% ##
-(      34,      51 ]      424   0.647%  99.927% 
-(      51,      76 ]       19   0.029%  99.956% 
-(      76,     110 ]        5   0.008%  99.963% 
-(     110,     170 ]       16   0.024%  99.988% 
-(     170,     250 ]        5   0.008%  99.995% 
-(     250,     380 ]        1   0.002%  99.997% 
-(    2900,    4400 ]        1   0.002%  99.998% 
+(       4,       6 ]        9   0.014%   0.014% 
+(       6,      10 ]      355   0.542%   0.555% 
+(      10,      15 ]      231   0.352%   0.908% 
+(      15,      22 ]     9174  13.998%  14.906% ###
+(      22,      34 ]    22912  34.961%  49.867% #######
+(      34,      51 ]    20890  31.876%  81.743% ######
+(      51,      76 ]     3779   5.766%  87.509% #
+(      76,     110 ]      106   0.162%  87.671% 
+(     110,     170 ]        6   0.009%  87.680% 
+(     170,     250 ]        1   0.002%  87.682% 
+(     580,     870 ]        1   0.002%  87.683% 
+(    1300,    1900 ]     8067  12.309%  99.992% ##
+(    1900,    2900 ]        4   0.006%  99.998% 
 (    4400,    6600 ]        1   0.002% 100.000% 
 
 Last write (close) 4: 8192 8071 
