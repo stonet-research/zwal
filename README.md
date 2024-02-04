@@ -48,9 +48,9 @@ We provide no guarantees over other ZenFS functionalities.
 # Structure of this repository
 
 * `zenfs-appends`: ZenFS with ZWALs implemented.
-* `zenfs-default`: Standard ZenFS (included for easy experimentation). We added support for variable buffer sizes.
-* `rocksdb-raw`: RocksDB modified to delete WALs instantly instead of archiving them
-* `rocksdb-ycsb`: The same as `rocksdb-raw`, but always forces RocksDB to use ZenFS. Necessary to use with YCSB.
+* `zenfs-default`: Standard ZenFS (included for easy experimentation). We added support for variable buffer sizes (change `SPARSE_BUFFER_SIZE_IN_KB` in `fs/io_zenfs.h`).
+* `rocksdb-raw`: RocksDB modified to delete WALs instantly instead of archiving them.
+* `rocksdb-ycsb`: The same as `rocksdb-raw`, but always forces RocksDB to use ZenFS, and forces some options (`WAL_size`). Necessary to use with YCSB.
 * `ycsb`: The YCSB benchmark, modified to support RocksDB with ZenFS
 * `data`: raw data from all our experiments
 * `fio-with-appends`: fio modified to support appends for io_uring with NVMe passthrough
