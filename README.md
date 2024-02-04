@@ -4,9 +4,9 @@ ZWAL is a new WAL design for ZNS that uses `zone appends` instead of `writes`. I
 
 # Dependencies
 
-ZWALs have the same requirements as ZenFS. ZenFS depends on libzbd and Linux kernel 5.4 or later to perform zone management operations. To use ZenFS on SSDs with Zoned Namespaces, Linux kernel 5.9 or later is required. ZenFS works with RocksDB version v6.19.3 or later.
+ZWALs have the same requirements as ZenFS, but have one additional requirement. This requirement is Linux with support fo io_uring with NVMe passthrough is required (> 6.0). ZenFS depends on libzbd. To use ZenFS on SSDs with Zoned Namespaces, Linux kernel 5.9 or later is required. ZenFS works with RocksDB version v6.19.3 or later.
 
-Additionally, Linux with support for io_uring with NVMe passthrough is required (> 6.0).
+Additionally,.
 
 # Build
 
