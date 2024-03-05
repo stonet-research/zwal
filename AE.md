@@ -46,7 +46,7 @@ bash run-fio-scaling.sh <nvmexny>
 All of the experiment's data is stored in: `data/fio/f2_<nvmexny>_uring_*`. By default it contains the data of our runs (can be used as a sanity check).
 We use the following naming convention in the data dir:`f2_<nvmexny>_uring_with_append_<bs>_<qd>` for appends and `f2_<nvmexny>_uring_without_append_<bs>` for writes.
 
-Note that we do not include scripts/data for blocksizes different than 8192 in this repository, this is, however, trivial to change. Change the `for bs in 8192` in the bash script.
+Note that we do not include scripts/data for blocksizes different than 4096, 8192 or 16384 in this repository, this is, however, trivial to change. Change the `for bs in 4096 8192 16384` in the bash script.
 
 # WAL write performance
 
