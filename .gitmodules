@@ -1,7 +1,7 @@
 [submodule "SimpleZNSDevice"]
 	path = SimpleZNSDevice
 	url = https://github.com/Krien/SimpleZNSDevice.git
-    branch = io-uring
+	branch = io-uring
 [submodule "libzbd"]
 	path = libzbd
 	url = https://github.com/westerndigitalcorporation/libzbd.git
