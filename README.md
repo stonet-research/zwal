@@ -38,7 +38,6 @@ Install SZD (use the `io_uring` branch):
 
 ```sh
 pushd SimpleZNSDevice
-git checkout io-uring
 # Setup SPDK and DPDK (we will not use them, but SZD needs them for dependencies)
 cd spdk
 ./configure
