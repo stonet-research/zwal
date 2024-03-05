@@ -5,6 +5,7 @@ ZWAL is a new WAL design for ZNS that uses `zone appends` instead of `writes`. I
 # Dependencies
 
 ZWALs have the same requirements as ZenFS, but additionally requires the SimpleZNSDevice library (SZD) and Linux with support for io_uring with NVMe passthrough (> 6.0).
+
 * [libzbd](https://github.com/westerndigitalcorporation/libzbd)
 * [SZD](https://github.com/Krien/SimpleZNSDevice/tree/io-uring)
 * RocksDB v6.19.3 or later
@@ -15,8 +16,40 @@ ZWALs have the same requirements as ZenFS, but additionally requires the SimpleZ
 ## Clone ZWAL with required submodules
 
 First clone the source base with all submodules included:
+
 ```bash
 git clone https://github.com/stonet-research/zwal.git --recursive
+```
+
+## Install dependencies
+
+Install libzbd (tested on 0ab157e):
+
+```sh
+pushd libzbd
+sh ./autogen.sh
+./configure
+make
+sudo make install
+popd
+```
+
+Install SZD (use the `io_uring` branch):
+
+```sh
+pushd SimpleZNSDevice
+# Setup SPDK and DPDK (we will not use them, but SZD needs them for dependencies)
+cd spdk
+./configure
+make -j
+sudo make install
+cd ..
+
+mkdir -p build && cd build
+rm -f CMakeCache.txt
+cmake ..
+make
+sudo make install
 ```
 
 ## Configure and build ZWAL
