@@ -45,7 +45,6 @@ cd dependencies/spdk
 ./scripts/pkgdep.sh
 ./configure
 make -j
-sudo make install
 cd ..
 
 mkdir -p build && cd build
