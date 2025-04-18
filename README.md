@@ -25,7 +25,7 @@ git clone https://github.com/stonet-research/zwal.git --recursive
 
 ## Install dependencies
 
-Install libzbd (tested on 0ab157e):
+Install libzbd (tested on `0ab157e`):
 
 ```sh
 pushd libzbd
@@ -41,7 +41,8 @@ Install SZD (use the `io_uring` branch):
 ```sh
 pushd SimpleZNSDevice
 # Setup SPDK and DPDK (we will not use them, but SZD needs them for dependencies)
-cd spdk
+cd dependencies/spdk
+./scripts/pkgdep.sh
 ./configure
 make -j
 sudo make install
@@ -60,8 +61,8 @@ ZWALs come with a number of configuration options that are defined in `#define` 
 These must be set before compilation (also see `build.sh` on examples). Apart from this the build is no different from ZenFS. ZWALs *do* require a specific change in RocksDB, hence we ship RocksDB along with ZWALs (see `rocksdb-raw`).
 
 ```bash
-rm -r rocksdb-raw/plugin/zenfs
-cp zenfs plugin/zenfs-appends rocksdb-raw/plugin/zenfs
+rm -rf rocksdb-raw/plugin/zenfs
+cp -r zenfs-appends rocksdb-raw/plugin/zenfs
 
 # Set WAL buffersize
 BUFFSIZE=4
@@ -75,9 +76,10 @@ sed -i "s/NAMELESS_WAL_DEPTH.*/NAMELESS_WAL_DEPTH ${MAXWALDEPTH}/g" rocksdb-raw/
 WALBARRIERSIZE=16384
 sed -i "s/#define WAL_BARRIER_SIZE_IN_KB.*/#define WAL_BARRIER_SIZE_IN_KB ${WALBARRIERSIZE}UL/g" rocksdb-raw/plugin/zenfs/fs/io_zenfs.h
 
-cd rocksdb
+cd rocksdb-raw
 DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make -j48 db_bench
 sudo DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make install
+
 cd plugin/zenfs/util
 make
 ```

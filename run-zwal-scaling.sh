@@ -38,7 +38,7 @@ for bs in 4 8 16 64 256 1024; do
             pushd  "${dir}/rocksdb-raw"
 
             echo "SCALING FILLRANDOM"
-            sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/src/spdk/dpdk/build/lib/ ./db_bench \
+            sudo ./db_bench \
                 --fs_uri=zenfs://dev:${1} \
                 --benchmarks=fillrandom \
                 --use_direct_io_for_flush_and_compaction \
@@ -75,7 +75,7 @@ for bs in 4 8 16 64 256; do
             pushd  "${dir}/rocksdb-raw"
 
             echo "SCALING FILLRANDOM"
-            sudo LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/user/src/spdk/dpdk/build/lib/ ./db_bench \
+            sudo ./db_bench \
                 --fs_uri=zenfs://dev:${1} \
                 --benchmarks=fillrandom \
                 --use_direct_io_for_flush_and_compaction \
