@@ -32,9 +32,4 @@ zenfs_LDFLAGS += -u zenfs_filesystem_reg
 
 ZENFS_ROOT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-$(shell cd $(ZENFS_ROOT_DIR) && ./generate-version.sh)
-ifneq ($(.SHELLSTATUS),0)
-$(error Generating ZenFS version failed)
-endif
-
 zenfs_PKGCONFIG_REQUIRES = $(zenfs_PKGCONFIG_REQUIRES-y)
