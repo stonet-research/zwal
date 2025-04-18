@@ -82,6 +82,8 @@ sudo DEBUG_LEVEL=0 ROCKSDB_PLUGINS=zenfs make install
 
 cd plugin/zenfs/util
 make
+
+# NOTE: if the install fails, please check if both SPDK and ZBD are installed correctly. To double-check try the install procedure with `cp -r zenfs-default` as well. 
 ```
 
 # Formatting a ZenFS file system with ZWALs enabled
